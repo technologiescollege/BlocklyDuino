@@ -34,7 +34,7 @@ Blockly.Language.base_delay = {
   init: function() {
     this.setColour(120);
     this.appendValueInput("DELAY_TIME", Number)
-        .appendTitle("Delay")
+        .appendTitle("Delai")
         .setCheck(Number);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -82,10 +82,10 @@ Blockly.Language.inout_digital_write = {
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-	      .appendTitle("DigitalWrite PIN#")
+	      .appendTitle("mettre le pin Digital")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-      	.appendTitle("Stat")
-      	.appendTitle(new Blockly.FieldDropdown([["HIGH", "HIGH"], ["LOW", "LOW"]]), "STAT");
+      	.appendTitle("a l'etat logique")
+      	.appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Write digital value to a specific Port');

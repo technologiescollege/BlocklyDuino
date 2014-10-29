@@ -1,7 +1,7 @@
 <html manifest=node.manifest>
 <head>
-  <meta charset="utf-8">
-  <title>BlocklyDuino</title>
+  <meta charset="windows-1252">
+  <title>Blockly Arduino</title>
   <!--script type="text/javascript" src="../blockly_compressed.js"></script-->
   <script type="text/javascript" src="Blob.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
@@ -34,9 +34,9 @@
  * List of tab names.
  * @private
  */
-var TABS_ = ['Blocs', 'Arduino', 'xml'];
+var TABS_ = ['blocks', 'arduino', 'xml'];
 
-var selected = 'Blocs';
+var selected = 'blocks';
 
 /**
  * Switch the visible pane when a tab is clicked.
@@ -250,7 +250,7 @@ function init(blockly) {
   <table height="100%" width="100%">
     <tr>
       <td>
-        <h1><a href="https://github.com/gasolin/BlocklyDuino/wiki">BlocklyDuino</a> &gt; web-based visual programming editor for arduino</h1>
+        <h1><a href="https://github.com/technologiescollege/BlocklyDuino">BlocklyDuino</a> &gt; éditeur graphique pour programmer les interfaces Arduino</h1>
       </td>
     </tr>
     <tr>
@@ -259,21 +259,21 @@ function init(blockly) {
           <tr id="tabRow" height="1em">
             <td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">Blocs</td>
             <td class="tabmin">&nbsp;</td>
-            <td id="tab_javascript" class="taboff" onclick="tabClick(this.id)">JavaScript</td>
-            <td class="tabmin">&nbsp;</td>
-            <!--td id="tab_dart" class="taboff" onclick="tabClick(this.id)">Dart</td>
+            <!--td id="tab_javascript" class="taboff" onclick="tabClick(this.id)">JavaScript</td>
             <td class="tabmin">&nbsp;</td-->
-            <td id="tab_python" class="taboff" onclick="tabClick(this.id)">Python</td>
+            <!--td id="tab_dart" class="taboff" onclick="tabClick(this.id)">Dart</td>
             <td class="tabmin">&nbsp;</td>
+            <td id="tab_python" class="taboff" onclick="tabClick(this.id)">Python</td>
+            <td class="tabmin">&nbsp;</td-->
             <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">Arduino</td>
             <td class="tabmin">&nbsp;</td>
             <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">XML</td>
             <td class="tabmax">
-              <button onclick="discard()">Abandonner</button>
-              <button onclick="save()">Sauver en XML</button>
+              <button onclick="discard()">Réinitialiser</button>
+              <button onclick="save()">Sauver au format XML</button>
               <button id="fakeload">Charger un fichier XML</button>
               <input type="file" id="load" style="display: none;"/>
-              <button class="launch" onclick="runJS()">Exécuter le programme</button>
+              <!--button class="launch" onclick="runJS()">Run Program</button-->
             </td>
           </tr>
         </table>
@@ -288,7 +288,7 @@ function init(blockly) {
         <div id="content_arduino">
           <textarea id="textarea_arduino" readonly></textarea>
         </div>
-        <pre id="content_python"></pre>
+        <!--pre id="content_python"></pre-->
         <div id="content_xml">
           <textarea id="textarea_xml" readonly></textarea>
         </div>

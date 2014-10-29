@@ -29,51 +29,51 @@
  */
 
 // Context menus.
-Blockly.MSG_DUPLICATE_BLOCK = 'Duplicate';
-Blockly.MSG_REMOVE_COMMENT = 'Remove Comment';
-Blockly.MSG_ADD_COMMENT = 'Add Comment';
-Blockly.MSG_EXTERNAL_INPUTS = 'External Inputs';
-Blockly.MSG_INLINE_INPUTS = 'Inline Inputs';
-Blockly.MSG_DELETE_BLOCK = 'Delete Block';
-Blockly.MSG_DELETE_X_BLOCKS = 'Delete %1 Blocks';
-Blockly.MSG_COLLAPSE_BLOCK = 'Collapse Block';
-Blockly.MSG_EXPAND_BLOCK = 'Expand Block';
-Blockly.MSG_DISABLE_BLOCK = 'Disable Block';
-Blockly.MSG_ENABLE_BLOCK = 'Enable Block';
-Blockly.MSG_HELP = 'Help';
+Blockly.MSG_DUPLICATE_BLOCK = 'Dupliquer';
+Blockly.MSG_REMOVE_COMMENT = 'Retirer le commentaire';
+Blockly.MSG_ADD_COMMENT = 'Ajouter un commentaire';
+Blockly.MSG_EXTERNAL_INPUTS = 'Variables externes';
+Blockly.MSG_INLINE_INPUTS = 'Variables fixes';
+Blockly.MSG_DELETE_BLOCK = 'Supprimer ce bloc';
+Blockly.MSG_DELETE_X_BLOCKS = 'Effacer %1 blocs';
+Blockly.MSG_COLLAPSE_BLOCK = 'Reduire le bloc';
+Blockly.MSG_EXPAND_BLOCK = 'Restaurer le bloc';
+Blockly.MSG_DISABLE_BLOCK = 'Desactiver le bloc';
+Blockly.MSG_ENABLE_BLOCK = 'Activer le bloc';
+Blockly.MSG_HELP = 'Aide';
 
 // Variable renaming.
-Blockly.MSG_CHANGE_VALUE_TITLE = 'Change value:';
-Blockly.MSG_NEW_VARIABLE = 'New variable...';
-Blockly.MSG_NEW_VARIABLE_TITLE = 'New variable name:';
-Blockly.MSG_RENAME_VARIABLE = 'Rename variable...';
-Blockly.MSG_RENAME_VARIABLE_TITLE = 'Rename all "%1" variables to:';
+Blockly.MSG_CHANGE_VALUE_TITLE = 'Changer la valeur :';
+Blockly.MSG_NEW_VARIABLE = 'Nouvelle variable...';
+Blockly.MSG_NEW_VARIABLE_TITLE = 'Nom de la nouvelle variable :';
+Blockly.MSG_RENAME_VARIABLE = 'Renommer la variable...';
+Blockly.MSG_RENAME_VARIABLE_TITLE = 'Renommer les "%1" variables en :';
 
 // Toolbox.
 Blockly.MSG_VARIABLE_CATEGORY = 'Variables';
 Blockly.MSG_PROCEDURE_CATEGORY = 'Procedures';
 
 // Colour Blocks.
-Blockly.LANG_CATEGORY_COLOUR = 'Colour';
+Blockly.LANG_CATEGORY_COLOUR = 'Couleur';
 Blockly.LANG_COLOUR_PICKER_HELPURL = 'http://en.wikipedia.org/wiki/Color';
-Blockly.LANG_COLOUR_PICKER_TOOLTIP = 'Choose a colour form the palette.';
+Blockly.LANG_COLOUR_PICKER_TOOLTIP = 'Choisissez une couleur dans la palette.';
 
 Blockly.LANG_COLOUR_RGB_HELPURL = 'http://en.wikipedia.org/wiki/RGB_color_model';
-Blockly.LANG_COLOUR_RGB_TITLE = 'colour with';
-Blockly.LANG_COLOUR_RGB_RED = 'red';
-Blockly.LANG_COLOUR_RGB_GREEN = 'green';
-Blockly.LANG_COLOUR_RGB_BLUE = 'blue';
-Blockly.LANG_COLOUR_RGB_TOOLTIP = 'Create a colour with the specified amount of red, green,\n' +
-    'and blue.  All values must be between 0.0 and 1.0.';
+Blockly.LANG_COLOUR_RGB_TITLE = 'colore avec';
+Blockly.LANG_COLOUR_RGB_RED = 'rouge';
+Blockly.LANG_COLOUR_RGB_GREEN = 'vert';
+Blockly.LANG_COLOUR_RGB_BLUE = 'bleu';
+Blockly.LANG_COLOUR_RGB_TOOLTIP = 'Creer une couleur avec les valeurs exactes de rouge, vert\n' +
+    'et bleu.  Toutes les valeurs doivent etre comprises entre 0,0 et 1,0.';
 
-Blockly.LANG_COLOUR_BLEND_TITLE = 'blend';
-Blockly.LANG_COLOUR_BLEND_COLOUR1 = 'colour 1';
-Blockly.LANG_COLOUR_BLEND_COLOUR2 = 'colour 2';
+Blockly.LANG_COLOUR_BLEND_TITLE = 'melange';
+Blockly.LANG_COLOUR_BLEND_COLOUR1 = 'couleur 1';
+Blockly.LANG_COLOUR_BLEND_COLOUR2 = 'couleur 2';
 Blockly.LANG_COLOUR_BLEND_RATIO = 'ratio';
-Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'Blends two colours together with a given ratio (0.0 - 1.0).';
+Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'Mélange deux coleurs ensemble avec un ratio (0,0 - 1,0).';
 
 // Control Blocks.
-Blockly.LANG_CATEGORY_CONTROLS = 'Control';
+Blockly.LANG_CATEGORY_CONTROLS = 'Controle';
 Blockly.LANG_CONTROLS_IF_HELPURL = 'http://code.google.com/p/blockly/wiki/If_Then';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_1 = 'If a value is true, then do some statements.';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_2 = 'If a value is true, then do the first block of statements.\n' +
@@ -83,12 +83,12 @@ Blockly.LANG_CONTROLS_IF_TOOLTIP_3 = 'If the first value is true, then do the fi
 Blockly.LANG_CONTROLS_IF_TOOLTIP_4 = 'If the first value is true, then do the first block of statements.\n' +
     'Otherwise, if the second value is true, do the second block of statements.\n' +
     'If none of the values are true, do the last block of statements.';
-Blockly.LANG_CONTROLS_IF_MSG_IF = 'if';
-Blockly.LANG_CONTROLS_IF_MSG_ELSEIF = 'else if';
-Blockly.LANG_CONTROLS_IF_MSG_ELSE = 'else';
-Blockly.LANG_CONTROLS_IF_MSG_THEN = 'do';
+Blockly.LANG_CONTROLS_IF_MSG_IF = 'si';
+Blockly.LANG_CONTROLS_IF_MSG_ELSEIF = 'si alors';
+Blockly.LANG_CONTROLS_IF_MSG_ELSE = 'alors';
+Blockly.LANG_CONTROLS_IF_MSG_THEN = 'faire';
 
-Blockly.LANG_CONTROLS_IF_IF_TITLE_IF = 'if';
+Blockly.LANG_CONTROLS_IF_IF_TITLE_IF = 'si';
 Blockly.LANG_CONTROLS_IF_IF_TOOLTIP = 'Add, remove, or reorder sections\n' +
     'to reconfigure this if block.';
 
@@ -99,9 +99,9 @@ Blockly.LANG_CONTROLS_IF_ELSE_TITLE_ELSE = 'else';
 Blockly.LANG_CONTROLS_IF_ELSE_TOOLTIP = 'Add a final, catch-all condition to the if block.';
 
 Blockly.LANG_CONTROLS_REPEAT_HELPURL = 'http://en.wikipedia.org/wiki/For_loop';
-Blockly.LANG_CONTROLS_REPEAT_TITLE_REPEAT = 'repeat';
-Blockly.LANG_CONTROLS_REPEAT_TITLE_TIMES = 'times';
-Blockly.LANG_CONTROLS_REPEAT_INPUT_DO = 'do';
+Blockly.LANG_CONTROLS_REPEAT_TITLE_REPEAT = 'repeter';
+Blockly.LANG_CONTROLS_REPEAT_TITLE_TIMES = 'fois';
+Blockly.LANG_CONTROLS_REPEAT_INPUT_DO = 'faire';
 Blockly.LANG_CONTROLS_REPEAT_TOOLTIP = 'Do some statements several times.';
 
 Blockly.LANG_CONTROLS_WHILEUNTIL_HELPURL = 'http://code.google.com/p/blockly/wiki/Repeat';
