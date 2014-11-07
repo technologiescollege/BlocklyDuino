@@ -73,7 +73,7 @@ Blockly.LANG_COLOUR_BLEND_RATIO = 'ratio';
 Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'Mélange deux coleurs ensemble avec un ratio (0,0 - 1,0).';
 
 // Control Blocks.
-Blockly.LANG_CATEGORY_CONTROLS = 'Controle';
+Blockly.LANG_CATEGORY_CONTROLS = 'Contrôle';
 Blockly.LANG_CONTROLS_IF_HELPURL = 'http://code.google.com/p/blockly/wiki/If_Then';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_1 = 'If a value is true, then do some statements.';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_2 = 'If a value is true, then do the first block of statements.\n' +
@@ -176,7 +176,7 @@ Blockly.LANG_LOGIC_NULL = 'null';
 Blockly.LANG_LOGIC_NULL_TOOLTIP = 'Returns null.';
 
 // Math Blocks.
-Blockly.LANG_CATEGORY_MATH = 'Math';
+Blockly.LANG_CATEGORY_MATH = 'Maths';
 Blockly.LANG_MATH_NUMBER_HELPURL = 'http://en.wikipedia.org/wiki/Number';
 Blockly.LANG_MATH_NUMBER_TOOLTIP = 'A number.';
 
@@ -260,7 +260,7 @@ Blockly.LANG_MATH_RANDOM_FLOAT_TOOLTIP = 'Return a random fraction between\n' +
     '0.0 (inclusive) and 1.0 (exclusive).';
 
 // Text Blocks.
-Blockly.LANG_CATEGORY_TEXT = 'Text';
+Blockly.LANG_CATEGORY_TEXT = 'Texte';
 Blockly.LANG_TEXT_TEXT_HELPURL = 'http://en.wikipedia.org/wiki/String_(computer_science)';
 Blockly.LANG_TEXT_TEXT_TOOLTIP = 'A letter, word, or line of text.';
 
@@ -337,8 +337,8 @@ Blockly.LANG_TEXT_PROMPT_HELPURL = 'http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF
 Blockly.LANG_TEXT_PROMPT_TITLE_PROMPT_FOR = 'prompt for';
 Blockly.LANG_TEXT_PROMPT_TITILE_WITH_MESSAGE = 'with message';
 Blockly.LANG_TEXT_PROMPT_TOOLTIP = 'Prompt for user input with the specified text.';
-Blockly.LANG_TEXT_PROMPT_TYPE_TEXT = 'text';
-Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER = 'number';
+Blockly.LANG_TEXT_PROMPT_TYPE_TEXT = 'texte';
+Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER = 'nombre';
 
 // Lists Blocks.
 Blockly.LANG_CATEGORY_LISTS = 'Lists';

@@ -37,10 +37,10 @@ Blockly.Language.grove_led = {
     this.appendDummyInput("")
         .appendTitle("DEL")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/e/e0/LED1.jpg/400px-LED1.jpg", 64, 64))
-        .appendTitle("PIN#")
+        .appendTitle("sur le PIN")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-        .appendTitle("Etat")
-        .appendTitle(new Blockly.FieldDropdown([["HIGH", "HIGH"], ["LOW", "LOW"]]), "STAT"); 
+        .appendTitle("a l'etat")
+        .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT"); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('diode verte');
@@ -53,9 +53,9 @@ Blockly.Language.grove_button = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("Bouton")
+        .appendTitle("l'etat du bouton")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/9/93/Button1.jpg/400px-Button1.jpg", 64, 64))
-        .appendTitle("PIN#")
+        .appendTitle(" sur la PIN")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
     this.setTooltip('Entree numerique');
@@ -68,12 +68,12 @@ Blockly.Language.grove_rotary_angle = {
   init: function() {
     this.setColour(10);
     this.appendDummyInput("")
-        .appendTitle("Rotary Angle")
+        .appendTitle("l'angle de rotation")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/5/59/Potentiometer1.jpg/400px-Potentiometer1.jpg", 64, 64))
-        .appendTitle("PIN#")
+        .appendTitle("sur le PIN")
         .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.setOutput(true, Number);
-    this.setTooltip('Analog output between 0 and Vcc');
+    this.setTooltip('Sortie Analogique entre 0 et Vcc');
   }
 };
 
