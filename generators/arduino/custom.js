@@ -14,10 +14,10 @@ Blockly.Language.custom_read = {
   init: function() {
     this.setColour(230);
 	this.appendDummyInput("")
-	    .appendTitle("CustomRead PIN#")
+	    .appendTitle("lecture personnalisée sur le PIN")
 	    .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
-    this.setTooltip('input block');
+    this.setTooltip('block d entrée');
   }
 };
 
@@ -28,7 +28,7 @@ Blockly.Language.custom_write = {
   init: function() {
     this.setColour(230);
 	this.appendDummyInput("")
-	    .appendTitle("CustomWrite PIN#")
+	    .appendTitle("écriture personnalisée sur le PIN")
 	    .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/e/e0/LED1.jpg/400px-LED1.jpg", 64, 64))
 	    .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN")
 	    .appendTitle("value");
@@ -36,7 +36,7 @@ Blockly.Language.custom_write = {
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Output block');
+    this.setTooltip('block de sortie');
   }
 };
 

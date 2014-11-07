@@ -35,15 +35,15 @@ Blockly.Language.grove_led = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("LED")
+        .appendTitle("DEL")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/e/e0/LED1.jpg/400px-LED1.jpg", 64, 64))
         .appendTitle("PIN#")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-        .appendTitle("stat")
+        .appendTitle("Etat")
         .appendTitle(new Blockly.FieldDropdown([["HIGH", "HIGH"], ["LOW", "LOW"]]), "STAT"); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('green LED');
+    this.setTooltip('diode verte');
   }
 };
 
@@ -53,12 +53,12 @@ Blockly.Language.grove_button = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("Button")
+        .appendTitle("Bouton")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/9/93/Button1.jpg/400px-Button1.jpg", 64, 64))
         .appendTitle("PIN#")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
-    this.setTooltip('Basic digital input');
+    this.setTooltip('Entree numerique');
   }
 };
 
