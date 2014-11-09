@@ -82,7 +82,7 @@ Blockly.Language.inout_digital_write = {
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-	      .appendTitle("mettre le PIN Digital")
+	      .appendTitle("mettre la broche Digital")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
       	.appendTitle("à l'état logique")
       	.appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");
@@ -98,7 +98,7 @@ Blockly.Language.inout_digital_read = {
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-	      .appendTitle("à l'état logique du PIN Digital")
+	      .appendTitle("l'état logique de la broche Digital")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
     this.setTooltip('');
@@ -111,7 +111,7 @@ Blockly.Language.inout_analog_write = {
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-        .appendTitle("écrire sur le PIN Analogique")
+        .appendTitle("écrire sur la broche Analogique")
         .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.appendValueInput("NUM", Number)
         .appendTitle("la valeur")
@@ -129,7 +129,7 @@ Blockly.Language.inout_analog_read = {
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-        .appendTitle("à la valeur lue sur le PIN Analogique")
+        .appendTitle("la valeur lue sur la broche Analogique")
         .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.setOutput(true, Number);
     this.setTooltip('Return value between 0 and 1024');
@@ -158,7 +158,7 @@ Blockly.Language.servo_move = {
     this.appendDummyInput("")
         .appendTitle("faire tourner le servo-moteur")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
-        .appendTitle("sur le PIN")
+        .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
     this.appendValueInput("DEGREE", Number)
         .setCheck(Number)
@@ -180,9 +180,9 @@ Blockly.Language.servo_read_degrees = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("à l'angle du servo-moteur")
+        .appendTitle("l'angle du servo-moteur")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
-        .appendTitle("connecté sur le PIN")
+        .appendTitle("connecté sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Number);
     this.setTooltip('renvoie le nombre de degrés de la dernière rotation');
@@ -195,7 +195,7 @@ Blockly.Language.serial_print = {
   init: function() {
     this.setColour(230);
     this.appendValueInput("CONTENT", String)
-        .appendTitle("envoi sur le port série la donnée");
+        .appendTitle("envoi sur le port série la donnée :");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('envoies des données sur le port série pour sruvaillance par le moniteur en ASCII');
