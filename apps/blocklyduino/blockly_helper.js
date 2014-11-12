@@ -71,7 +71,7 @@ function load(event) {
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm('Voulez-vous remplacer les blocs existants ?\n"Annuler" les laissera')) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
@@ -88,7 +88,7 @@ function load(event) {
  */
 function discard() {
   var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (count < 2 || window.confirm('Delete all ' + count + ' blocks?')) {
+  if (count < 2 || window.confirm('Voulez-vous effacer les ' + count + ' blocs ?')) {
     Blockly.mainWorkspace.clear();
     renderContent();
   }
@@ -155,11 +155,11 @@ function onSuccess () {
       try {
       var xml = Blockly.Xml.textToDom(ajax.responseText);
       } catch (e) {
-        alert('Error parsing XML:\n' + e);
+        alert('Erreur en ouvrant le fichier XML :\n' + e);
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm('Voulez-vous vraiment remplacer tous les blocs ?\n"Annuler" les laissera')) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
@@ -172,7 +172,7 @@ function onSuccess () {
 function load_by_url(uri) {
   ajax = createAJAX();
   if (!ajax) {
-　　   alert ('Not compatible with XMLHttpRequest');
+　　   alert ('Pas compatible avec XMLHttpRequest');
 　　   return 0;
 　  }
   if (ajax.overrideMimeType) {

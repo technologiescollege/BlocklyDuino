@@ -835,7 +835,7 @@ Blockly.Arduino.grove_motor_shield = function() {
   } else if (dropdown_direction==="stop"){
     Blockly.Arduino.definitions_['define_stop'] = "void stop()\n"+
 "{\n"+
-     "digitalWrite(9,LOW);// Unenble the pin, to stop the motor. this should be done to avid damaging the motor.\n"+
+     "digitalWrite(9,LOW);// Un-enable the pin, to stop the motor. this should be done to avoid damaging the motor.\n"+
      "digitalWrite(10,LOW);\n"+
      "delay(1000);\n"+
 "}\n\n"
