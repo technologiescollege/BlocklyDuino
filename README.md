@@ -1,12 +1,12 @@
-### Welcome to BlocklyDuino
+### Version francisée de BlocklyDuino
 
-BlocklyDuino is a **web-based visual programming editor for [Arduino](http://www.arduino.cc/)**.
+BlocklyDuino est un programme web **webwre graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
 
-BlocklyDuino is based on [Blockly](http://code.google.com/p/blockly/), the web-based, graphical programming editor. Provide static type language blocks and code generators for arduino programming.
+BlocklyDuino est basé sur [Blockly](http://code.google.com/p/blockly/), un éditeur de programme graphique en interface web. Il fournit une traduction de la programmation graphique pour générer du code à copier coller dans l'IDE Arduino.
 
-BlocklyDuino also support [Grove](http://www.seeedstudio.com/wiki/GROVE_System) blocks to easily get started with microcontroller-based experimentation and learning.
+BlocklyDuino possède une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptés à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
-[We also have Google+ Page](https://plus.google.com/111979846292233941175).
+Cette version a été françisée et réorganisée pour la faire utilisé au mieux par des élèves débutants dans le code.
 
 ### Features
 
