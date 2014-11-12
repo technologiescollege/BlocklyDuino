@@ -63,14 +63,14 @@ Blockly.LANG_COLOUR_RGB_TITLE = 'colore avec';
 Blockly.LANG_COLOUR_RGB_RED = 'rouge';
 Blockly.LANG_COLOUR_RGB_GREEN = 'vert';
 Blockly.LANG_COLOUR_RGB_BLUE = 'bleu';
-Blockly.LANG_COLOUR_RGB_TOOLTIP = 'Creer une couleur avec les valeurs exactes de rouge, vert\n' +
-    'et bleu.  Toutes les valeurs doivent etre comprises entre 0,0 et 1,0.';
+Blockly.LANG_COLOUR_RGB_TOOLTIP = 'créer une couleur avec les valeurs exactes de rouge, vert\n' +
+    'et bleu.  Toutes les valeurs doivent être comprises entre 0,0 et 1,0.';
 
 Blockly.LANG_COLOUR_BLEND_TITLE = 'mélange';
 Blockly.LANG_COLOUR_BLEND_COLOUR1 = 'couleur 1';
 Blockly.LANG_COLOUR_BLEND_COLOUR2 = 'couleur 2';
 Blockly.LANG_COLOUR_BLEND_RATIO = 'ratio';
-Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'Mélange deux coleurs ensemble avec un ratio (0,0 - 1,0).';
+Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'mélange deux cuoleurs ensemble avec un ratio (0,0 - 1,0).';
 
 // Control Blocks.
 Blockly.LANG_CATEGORY_CONTROLS = 'Contrôle';
@@ -158,8 +158,8 @@ Blockly.LANG_LOGIC_COMPARE_TOOLTIP_GTE = 'Return true if the first input is grea
 Blockly.LANG_LOGIC_OPERATION_HELPURL = 'http://code.google.com/p/blockly/wiki/And_Or';
 Blockly.LANG_LOGIC_OPERATION_AND = 'ET';
 Blockly.LANG_LOGIC_OPERATION_OR = 'OU';
-Blockly.LANG_LOGIC_OPERATION_TOOLTIP_AND = 'Return true if both inputs are true.';
-Blockly.LANG_LOGIC_OPERATION_TOOLTIP_OR = 'Return true if either inputs are true.';
+Blockly.LANG_LOGIC_OPERATION_TOOLTIP_AND = 'renvoie VRAI si les 2 conditions sont à VRAI';
+Blockly.LANG_LOGIC_OPERATION_TOOLTIP_OR = 'renvoie VRAI si une des deux conditions est VRAI';
 
 Blockly.LANG_LOGIC_NEGATE_HELPURL = 'http://code.google.com/p/blockly/wiki/Not';
 Blockly.LANG_LOGIC_NEGATE_INPUT_NOT = 'NON';
@@ -172,8 +172,8 @@ Blockly.LANG_LOGIC_BOOLEAN_FALSE = 'FAUX';
 Blockly.LANG_LOGIC_BOOLEAN_TOOLTIP = 'Returns either true or false.';
 
 Blockly.LANG_LOGIC_NULL_HELPURL = 'http://en.wikipedia.org/wiki/Nullable_type';
-Blockly.LANG_LOGIC_NULL = 'null';
-Blockly.LANG_LOGIC_NULL_TOOLTIP = 'Returns null.';
+Blockly.LANG_LOGIC_NULL = 'vide';
+Blockly.LANG_LOGIC_NULL_TOOLTIP = 'renvoie null';
 
 // Math Blocks.
 Blockly.LANG_CATEGORY_MATH = 'Maths';

@@ -49,7 +49,7 @@ Blockly.Language.base_map = {
   init: function() {
     this.setColour(230);
     this.appendValueInput("NUM", Number)
-        .appendTitle("faire la proportionnelle ")
+        .appendTitle("faire la transposée ")
         .setCheck(Number);
     this.appendValueInput("DMAX", Number)
         .appendTitle("sur un intervalle de [0-")
