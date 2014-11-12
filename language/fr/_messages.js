@@ -84,15 +84,15 @@ Blockly.LANG_CONTROLS_IF_TOOLTIP_4 = 'If the first value is true, then do the fi
     'Otherwise, if the second value is true, do the second block of statements.\n' +
     'If none of the values are true, do the last block of statements.';
 Blockly.LANG_CONTROLS_IF_MSG_IF = 'si';
-Blockly.LANG_CONTROLS_IF_MSG_ELSEIF = 'sinon si';
-Blockly.LANG_CONTROLS_IF_MSG_ELSE = 'alors';
-Blockly.LANG_CONTROLS_IF_MSG_THEN = 'faire';
+Blockly.LANG_CONTROLS_IF_MSG_ELSEIF = 'sinon, si';
+Blockly.LANG_CONTROLS_IF_MSG_ELSE = 'sinon';
+Blockly.LANG_CONTROLS_IF_MSG_THEN = 'alors faire';
 
 Blockly.LANG_CONTROLS_IF_IF_TITLE_IF = 'si';
 Blockly.LANG_CONTROLS_IF_IF_TOOLTIP = 'Add, remove, or reorder sections\n' +
     'to reconfigure this if block.';
 
-Blockly.LANG_CONTROLS_IF_ELSEIF_TITLE_ELSEIF = 'sinon si';
+Blockly.LANG_CONTROLS_IF_ELSEIF_TITLE_ELSEIF = 'sinon, si';
 Blockly.LANG_CONTROLS_IF_ELSEIF_TOOLTIP = 'Add a condition to the if block.';
 
 Blockly.LANG_CONTROLS_IF_ELSE_TITLE_ELSE = 'sinon';
