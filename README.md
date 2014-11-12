@@ -1,8 +1,8 @@
 ### Version francisée de BlocklyDuino
 
-BlocklyDuino est un programme web **webwre graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
+BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
 
-BlocklyDuino est basé sur [Blockly](http://code.google.com/p/blockly/), un éditeur de programme graphique en interface web. Il fournit une traduction de la programmation graphique pour générer du code à copier coller dans l'IDE Arduino.
+BlocklyDuino est basé sur [Blockly](http://code.google.com/p/blockly/), un éditeur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique, contrairement à Blockly, pour générer du code à copier coller dans l'IDE Arduino.
 
 BlocklyDuino possède une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptés à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
@@ -43,11 +43,9 @@ The preffered way is to put the BlocklyDuino/web folder into a web server and op
 Check changelog [here](https://github.com/gasolin/BlocklyDuino/blob/master/CHANGELOG.txt)
 
 ### Authors and Contributors
-Fred Lin (@gasolin) .
-
-Thanks Neil Fraser, Q.Neutron from Blockly http://code.google.com/p/blockly/
+Fred Lin (@gasolin)
+Merci à Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
 Thanks Arduino and Seeeduino guys for Arduino and Grove blocks.
-
 The project is also inspired by [arduiblock](https://github.com/taweili/ardublock) and [modkit](http://www.modk.it/)
 
 ### License
