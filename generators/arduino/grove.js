@@ -1,4 +1,4 @@
-//http://www.seeedstudio.com/wiki/GROVE_System
+﻿//http://www.seeedstudio.com/wiki/GROVE_System
 //http://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&search_in_description=1&keyword=grovefamily
 //support starter bundle example http://www.seeedstudio.com/wiki/GROVE_-_Starter_Kit_V1.1b
 
@@ -39,7 +39,7 @@ Blockly.Language.grove_led = {
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/e/e0/LED1.jpg/400px-LED1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-        .appendTitle("a l'etat")
+        .appendTitle("à l'état")
         .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT"); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -48,17 +48,17 @@ Blockly.Language.grove_led = {
 };
 
 Blockly.Language.grove_button = {
-  category: 'Grove : capteurs numeriques',
+  category: 'Grove : capteurs numériques',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Button',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("l'etat du bouton")
+        .appendTitle("l'état du bouton")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/9/93/Button1.jpg/400px-Button1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
-    this.setTooltip('entree numerique');
+    this.setTooltip('entrée numérique');
   }
 };
 
@@ -78,17 +78,17 @@ Blockly.Language.grove_rotary_angle = {
 };
 
 Blockly.Language.grove_tilt_switch = {
-  category: 'Grove : capteurs numeriques',
+  category: 'Grove : capteurs numériques',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Tilt_switch',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("l'etat du capteur 'Tilt'")
+        .appendTitle("l'état du capteur 'Tilt'")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/9/95/Tilt1.jpg/400px-Tilt1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
-    this.setTooltip("l'interrupteur se ferme, etat 1, quand il est bouscule 'tilt'");
+    this.setTooltip("l'interrupteur se ferme : état 1, quand il est bouscule 'tilt'");
   }
 };
 
@@ -98,15 +98,15 @@ Blockly.Language.grove_piezo_buzzer = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("mettre le buzzer piezzo-electrique")
+        .appendTitle("mettre le buzzer piezzo-électrique")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/e/ed/Buzzer1.jpg/400px-Buzzer1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-        .appendTitle("a l'etat")
+        .appendTitle("à l'état")
         .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('emet un son quand le buzzer est mis a 1');
+    this.setTooltip('émet un son quand le buzzer est mis à 1');
   }
 };
 
@@ -120,7 +120,7 @@ Blockly.Language.grove_relay = {
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/0/04/Twig-Relay1.jpg/400px-Twig-Relay1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-        .appendTitle("a l'etat")
+        .appendTitle("à l'état")
         .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");    
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -134,82 +134,82 @@ Blockly.Language.grove_temporature_sensor = {
   init: function() {
     this.setColour(10);
     this.appendDummyInput("")
-        .appendTitle("la temperature lue sur le capteur")
+        .appendTitle("la température °C lue sur le capteur")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/b/b0/Temperature1.jpg/400px-Temperature1.jpg", 64, 64))
         .appendTitle("de la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN")
     this.setOutput(true, Number);
-    this.setTooltip('renvoie la valeur lue de la temperature en degres');
+    this.setTooltip('renvoie la valeur lue de la température en degrés');
   }
 };
 
 Blockly.Language.grove_serial_lcd_print = {
-  category: 'Grove : ecran LCD',
+  category: 'Grove : écran LCD',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Serial_LCD',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("ecran LCD")
+        .appendTitle("écran LCD")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/6/6a/LCD1.jpg/400px-LCD1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.appendValueInput("TEXT", String)
         .setCheck(String)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle("ecrire sur la ligne 1");
+        .appendTitle("écrire sur la ligne 1");
     this.appendValueInput("TEXT2", String)
         .setCheck(String)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle("ecrire sur la ligne 2")
+        .appendTitle("écrire sur la ligne 2")
     this.appendValueInput("DELAY_TIME", Number)
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendTitle("pendant (ms)");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('ecrit le texte sur un ecran LCD de 2 lignes et 16 caracteres');
+    this.setTooltip('ecrit le texte sur un écran LCD de 2 lignes et 16 caracteres');
   }
 };
 
 //grove lcd power on/off
 Blockly.Language.grove_serial_lcd_power = {
-  category: 'Grove : ecran LCD',
+  category: 'Grove : écran LCD',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("ecran LCD")
+        .appendTitle("écran LCD")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/6/6a/LCD1.jpg/400px-LCD1.jpg", 64, 64))
         .appendTitle("de la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendTitle("mettre sur ")
-        .appendTitle(new Blockly.FieldDropdown([["marche", "ON"], ["arret", "OFF"]]), "STAT"); 
+        .appendTitle(new Blockly.FieldDropdown([["marche", "ON"], ["arrêt", "OFF"]]), "STAT"); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("eteint ou allume l'ecran");
+    this.setTooltip("eteint ou allume l'écran");
   }
 };
 
 //scroll left/right/no scroll/blink/noblink
 Blockly.Language.grove_serial_lcd_effect = {
-category: 'Grove : ecran LCD',
+category: 'Grove : écran LCD',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("ecran LCD")
+        .appendTitle("écran LCD")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/6/6a/LCD1.jpg/400px-LCD1.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.appendDummyInput("")
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendTitle("activer l'effet")
-        .appendTitle(new Blockly.FieldDropdown([["defilement vers la gauche", "LEFT"], ["defilement vers la droite", "RIGHT"], ["defilement automatique", "AUTO"]]), "STAT"); 
+        .appendTitle(new Blockly.FieldDropdown([["défilement vers la gauche", "LEFT"], ["défilement vers la droite", "RIGHT"], ["défilement automatique", "AUTO"]]), "STAT"); 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('modifie des effets integres : defilements');
+    this.setTooltip('modifie des effets integres : défilements');
   }
 };
 
@@ -229,22 +229,22 @@ Blockly.Language.grove_sound_sensor = {
 };
 
 Blockly.Language.grove_pir_motion_sensor = {
-  category: 'Grove : capteurs numeriques',
+  category: 'Grove : capteurs numériques',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_PIR_Motion_Sensor',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-        .appendTitle("la detection mouvements")
+        .appendTitle("la détection de mouvements")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/f/fd/Twig-PIR_Motion_Sensor.jpg/400px-Twig-PIR_Motion_Sensor.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
     this.setOutput(true, Number);
-    this.setTooltip("quand un mouvement est detecte dans sa portee, l'etat est mis a 1");
+    this.setTooltip("quand un mouvement est détecté dans sa portee, l'état est mis a 1");
   }
 };
 
 Blockly.Language.grove_line_finder = {
-  category: 'Grove : capteurs numeriques',
+  category: 'Grove : capteurs numériques',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Line_Finder',
   init: function() {
     this.setColour(190);
@@ -254,7 +254,7 @@ Blockly.Language.grove_line_finder = {
 	      .appendTitle("sur la broche")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
-    this.setTooltip("resultat numerique (0 ou 1) suivant qu'il lit une ligne noire sur un fond blanc");
+    this.setTooltip("résultat numérique (0 ou 1) suivant qu'il lit une ligne noire sur un fond blanc");
   }
 };
 
@@ -264,7 +264,7 @@ Blockly.Language.grove_ultrasonic_ranger = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-	      .appendTitle("la distance mesuree par ultra-son")
+	      .appendTitle("la distance mesurée par ultra-son")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/b/b0/Twig_-_Ultrasonic_Ranger2.jpg/200px-Twig_-_Ultrasonic_Ranger2.jpg", 64, 64))
 	      .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
@@ -308,7 +308,7 @@ Blockly.Language.grove_thumb_joystick = {
         .appendTitle("suivant l'axe")
         .appendTitle(new Blockly.FieldDropdown([["x", "x"],  ["y", "y"]]), "AXIS");
     this.setOutput(true, Number);
-this.setTooltip("renvoie une valeur numerique (200~800) representant l'inclinaison dans chaque axe");
+this.setTooltip("renvoie une valeur numérique (200~800) représentant l'inclinaison dans chaque axe");
   }
 };
 
@@ -318,7 +318,7 @@ Blockly.Language.grove_rgb_led = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
-  .appendTitle("allumer la diode RGB en serie")
+  .appendTitle("allumer la diode RGB en série")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/chanbalelednb1.jpg", 64, 64))
   .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")

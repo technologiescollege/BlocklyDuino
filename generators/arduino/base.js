@@ -34,7 +34,7 @@ Blockly.Language.base_delay = {
   init: function() {
     this.setColour(120);
     this.appendValueInput("DELAY_TIME", Number)
-        .appendTitle("délai")
+        .appendTitle("délai (en ms) de")
         .setCheck(Number);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -68,8 +68,8 @@ Blockly.Language.inout_buildin_led = {
    init: function() {
      this.setColour(190);
      this.appendDummyInput("")
-	       .appendTitle("état de la DEL sur la carte")
-	       .appendTitle(new Blockly.FieldDropdown([["HIGH", "HIGH"], ["LOW", "LOW"]]), "STAT");
+	       .appendTitle("mettre la DEL sur la carte à l'état logique")
+	       .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");
      this.setPreviousStatement(true, null);
      this.setNextStatement(true, null);
      this.setTooltip('éteint ou allume la DEL sur la carte Arduino');
@@ -142,7 +142,7 @@ Blockly.Language.inout_highlow = {
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-        .appendTitle(new Blockly.FieldDropdown([["HIGH", "HIGH"], ["LOW", "LOW"]]), 'BOOL')
+        .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), 'BOOL')
     this.setOutput(true, Boolean);
     this.setTooltip(Blockly.LANG_LOGIC_BOOLEAN_TOOLTIP_1);
   }
@@ -163,7 +163,7 @@ Blockly.Language.servo_move = {
     this.appendValueInput("DEGREE", Number)
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle("d'un angle de (0~180°)");
+        .appendTitle("d'un angle (0~180°) de");
     this.appendValueInput("DELAY_TIME", Number)
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -195,7 +195,7 @@ Blockly.Language.serial_print = {
   init: function() {
     this.setColour(230);
     this.appendValueInput("CONTENT", String)
-        .appendTitle("envoi sur le port série la donnée :");
+        .appendTitle("envoyer sur le port série la donnée :");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('envoies des données sur le port série pour sruvaillance par le moniteur en ASCII');
