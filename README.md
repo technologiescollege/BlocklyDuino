@@ -21,11 +21,11 @@ Cette version a été françisée et réorganisée pour la faire utiliser au mie
 ### Démos
 
 BlocklyDuino un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
-[Web](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) 
+[Technologies/BlocklyDuino](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) 
 
-You can link directly to examples
-* [demo 1](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
-* [demo 2](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/servo_potentio.xml)
+Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (_ou tout en local_) :
+* [démo 1 : faire clignoter une diode](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
+* [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/servo_potentio.xml)
 
 Or watch the [video demo](http://www.youtube.com/watch?v=_swiyXcUvNY)
 
