@@ -20,8 +20,8 @@ Cette version a été françisée et réorganisée pour la faire utiliser au mie
 
 ### Démos
 
-BlocklyDuino is a web tool. You can give it a try at
-[Web](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) to see the working BlocklyDuino.
+BlocklyDuino un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
+[Web](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) 
 
 You can link directly to examples
 * [demo 1](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
