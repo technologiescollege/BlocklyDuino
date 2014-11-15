@@ -27,7 +27,7 @@ Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'
 * [démo 1 : faire clignoter une diode](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
 * [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/servo_potentio.xml)
 
-Or watch the [video demo](http://www.youtube.com/watch?v=_swiyXcUvNY)
+Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/watch?v=_swiyXcUvNY)
 
 ### Run locally on your web browser
 
