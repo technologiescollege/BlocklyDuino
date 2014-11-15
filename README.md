@@ -21,8 +21,8 @@ BlocklyDuino is a web tool. You can give it a try at
 [Web](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) to see the working BlocklyDuino.
 
 You can link directly to examples
-* [demo 1](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/demos/blocklyduino/exemples/blink.xml)
-* [demo 2](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/demos/blocklyduino/exemples/servo_potentio.xml)
+* [demo 1](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
+* [demo 2](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/servo_potentio.xml)
 
 Or watch the [video demo](http://www.youtube.com/watch?v=_swiyXcUvNY)
 
