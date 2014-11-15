@@ -41,17 +41,18 @@ Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux po
 
 1. utiliser votre navigateur pour ouvrir BlocklyDuino grâce au fichier 'index.html'
 2. créer son programme Arduino par drag'n'drop (_cliqué-déplacé_) des blocs
-3. sélectionner l'onglet 'Arduino' pour en copier le contenu dans l'[IDE Arduino](http://arduino.cc/en/Main/Software)
+3. sélectionner l'onglet 'Arduino' pour en copier le contenu dans l'[IDE Arduino](https://github.com/technologiescollege/arduino)
 4. presser le bouton 'Téléverser' pour transférer le code dans la mémoire de la carte Arduino
 
 
-## Authors and Contributors
+## Auteurs et contributeurs
 Fred Lin (@gasolin)
-Merci � Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
-Thanks Arduino and Seeeduino guys for Arduino and Grove blocks.
-The project is also inspired by [arduiblock](https://github.com/taweili/ardublock) and [modkit](http://www.modk.it/)
+Merci à Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
+Merci à l'équipe d'Arduino et Seeeduino pour les blocs spécifiques.
+Ce projet s'est aussi inspiré de [arduiblock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/)
+Modifications, simplifications et francisation par Sébastien Canet.
 
-## License
+## Licence
 
 Copyright (C) 2012~2014 Fred Lin gasolin+blockly@gmail.com
 
