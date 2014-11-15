@@ -1,12 +1,16 @@
 ### Version francisée de BlocklyDuino
 
 BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
+![](/http://www.technologiescollege.fr/blocklyduino/Capture.jpg)
 
-BlocklyDuino est basé sur [Blockly](http://code.google.com/p/blockly/), un éditeur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique, contrairement à Blockly, pour générer du code à copier coller dans l'IDE Arduino.
+
+BlocklyDuino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique (contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/apps/code/index.html), pour générer du code à copier coller dans l'IDE Arduino.
 
 BlocklyDuino possède une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptés à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
 Cette version a été françisée et réorganisée pour la faire utiliser au mieux par des élèves débutants dans le code.
+
+**_TOutes les remarques sont les bienvenues pour améliorer la syntaxe !_**
 
 ### Features
 
@@ -15,7 +19,7 @@ Cette version a été françisée et réorganisée pour la faire utiliser au mie
 * Interacive Arduino board with 10+ predefined Grove sensor blocks
 * Load different on-site examples with url parameters
 
-### Démo
+### Démos
 
 BlocklyDuino is a web tool. You can give it a try at
 [Web](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) to see the working BlocklyDuino.
