@@ -50,7 +50,7 @@ Fred Lin (@gasolin)
 Merci à Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
 Merci à l'équipe d'Arduino et Seeeduino pour les blocs spécifiques.
 Ce projet s'est aussi inspiré de [arduiblock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/)
-Modifications, simplifications et francisation par Sébastien Canet.
+Modifications, simplifications et françisation par Sébastien Canet.
 
 ## Licence
 
