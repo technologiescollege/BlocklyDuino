@@ -1,4 +1,5 @@
-### Version francisée de BlocklyDuino
+Version francisée de BlocklyDuino
+=====
 
 BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
 
@@ -12,14 +13,14 @@ Cette version a été françisée et réorganisée pour la faire utiliser au mie
 
 **_Toutes les remarques sont les bienvenues pour améliorer la syntaxe !_**
 
-### Fonctions
+## Fonctions
 
 * Programmation pour Arduino en drag'n'drop graphique
 * Génère un code totalement compatible avec le code Arduino
 * Interaction des cartes Arduino grâce aux modules Grove rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove
 * Possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL _(voir les démos ci-dessous)_
 
-### Démos
+## Démos
 
 BlocklyDuino un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
 [Technologies/BlocklyDuino](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) 
@@ -30,29 +31,29 @@ Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'
 
 Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/watch?v=_swiyXcUvNY)
 
-### Run locally on your web browser
+## Utiliser en local dans son navigateur web
 
-If you want to install it locally. Get code from github and open `blockly/demos/blocklyduino/index.html` in your browser.
+Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github et d'ouvrir le fichier `apps/blocklyduino/index.html` dans votre navigateur.
 
-The preffered way is to put the BlocklyDuino/web folder into a web server and open the url like localhost/public/blockly/demos/blocklyduino/index.html for use.
+Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
-### Usage (3 Steps)
+## Usage (3 Steps)
 
 1. Open browser to BlocklyDuino, Drag and Drop blocks to make arduino program. 
 2. Select 'Arduino' tab to copy source code to Arduino IDE
 3. press 'upload' button to burn the code into arduino
 
-### ChangeLog
+## ChangeLog
 
 Check changelog [here](https://github.com/gasolin/BlocklyDuino/blob/master/CHANGELOG.txt)
 
-### Authors and Contributors
+## Authors and Contributors
 Fred Lin (@gasolin)
 Merci � Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
 Thanks Arduino and Seeeduino guys for Arduino and Grove blocks.
 The project is also inspired by [arduiblock](https://github.com/taweili/ardublock) and [modkit](http://www.modk.it/)
 
-### License
+## License
 
 Copyright (C) 2012~2014 Fred Lin gasolin+blockly@gmail.com
 
