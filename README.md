@@ -1,12 +1,12 @@
-### Version francisée de BlocklyDuino
+### Version francisï¿½e de BlocklyDuino
 
 BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
 
-BlocklyDuino est basé sur [Blockly](http://code.google.com/p/blockly/), un éditeur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique, contrairement à Blockly, pour générer du code à copier coller dans l'IDE Arduino.
+BlocklyDuino est basï¿½ sur [Blockly](http://code.google.com/p/blockly/), un ï¿½diteur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique, contrairement ï¿½ Blockly, pour gï¿½nï¿½rer du code ï¿½ copier coller dans l'IDE Arduino.
 
-BlocklyDuino possède une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptés à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
+BlocklyDuino possï¿½de une bibliothï¿½que de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particuliï¿½rement adaptï¿½s ï¿½ la dï¿½couverte des micro-contrï¿½leurs et aux expï¿½rimentations de systï¿½mes mï¿½catroniques.
 
-Cette version a été françisée et réorganisée pour la faire utilisé au mieux par des élèves débutants dans le code.
+Cette version a ï¿½tï¿½ franï¿½isï¿½e et rï¿½organisï¿½e pour la faire utiliser au mieux par des ï¿½lï¿½ves dï¿½butants dans le code.
 
 ### Features
 
@@ -15,14 +15,14 @@ Cette version a été françisée et réorganisée pour la faire utilisé au mieux par 
 * Interacive Arduino board with 10+ predefined Grove sensor blocks
 * Load different on-site examples with url parameters
 
-### Demo
+### DÃ©mo
 
 BlocklyDuino is a web tool. You can give it a try at
-[Web](http://www.gasolin.idv.tw/public/blockly/demos/blocklyduino/index.html) to see the working BlocklyDuino.
+[Web](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) to see the working BlocklyDuino.
 
 You can link directly to examples
-* [demo 1](http://www.gasolin.idv.tw/public/blockly/demos/blocklyduino/index.html?url=/public/blockly/demos/blocklyduino/examples/blink.xml)
-* [demo 2](http://www.gasolin.idv.tw/public/blockly/demos/blocklyduino/index.html?url=/public/blockly/demos/blocklyduino/examples/servo_potentio.xml)
+* [demo 1](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/demos/blocklyduino/exemples/blink.xml)
+* [demo 2](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/demos/blocklyduino/exemples/servo_potentio.xml)
 
 Or watch the [video demo](http://www.youtube.com/watch?v=_swiyXcUvNY)
 
@@ -44,7 +44,7 @@ Check changelog [here](https://github.com/gasolin/BlocklyDuino/blob/master/CHANG
 
 ### Authors and Contributors
 Fred Lin (@gasolin)
-Merci à Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
+Merci ï¿½ Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
 Thanks Arduino and Seeeduino guys for Arduino and Grove blocks.
 The project is also inspired by [arduiblock](https://github.com/taweili/ardublock) and [modkit](http://www.modk.it/)
 
