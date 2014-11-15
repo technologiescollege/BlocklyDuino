@@ -5,7 +5,7 @@ BlocklyDuino est un programme web, un **webware graphique permettant la programm
 
 ![Blink !](http://www.technologiescollege.fr/blocklyduino/Capture.jpg)
 
-BlocklyDuino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/apps/code/index.html))_, pour générer du code à copier coller dans l'IDE Arduino.
+BlocklyDuino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique par une interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/apps/code/index.html))_, pour générer du code à copier coller dans l'IDE Arduino.
 
 BlocklyDuino possède une bibliothèque de blocs pour les modules [Grove](http://www.seeedstudio.com/wiki/GROVE_System), particulièrement adaptée à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
 
@@ -33,7 +33,7 @@ Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/
 
 ## Utiliser en local dans son navigateur web
 
-Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_Download Zip_)et d'ouvrir le fichier `index.html` dans votre navigateur.
+Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_Download Zip_) et d'ouvrir le fichier `index.html` dans votre navigateur.
 
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
