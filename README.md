@@ -33,19 +33,17 @@ Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/
 
 ## Utiliser en local dans son navigateur web
 
-Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_Download Zip_)et d'ouvrir le fichier `apps/blocklyduino/index.html` dans votre navigateur.
+Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_Download Zip_)et d'ouvrir le fichier `index.html` dans votre navigateur.
 
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
-## Usage (3 Steps)
+## Utilisation en 4 temps
 
-1. Open browser to BlocklyDuino, Drag and Drop blocks to make arduino program. 
-2. Select 'Arduino' tab to copy source code to Arduino IDE
-3. press 'upload' button to burn the code into arduino
+1. utiliser votre navigateur pour ouvrir BlocklyDuino grâce au fichier 'index.html'
+2. créer son programme Arduino par drag'n'drop (_cliqué-déplacé_) des blocs
+3. sélectionner l'onglet 'Arduino' pour en copier le contenu dans l'[IDE Arduino](http://arduino.cc/en/Main/Software)
+4. presser le bouton 'Téléverser' pour transférer le code dans la mémoire de la carte Arduino
 
-## ChangeLog
-
-Check changelog [here](https://github.com/gasolin/BlocklyDuino/blob/master/CHANGELOG.txt)
 
 ## Authors and Contributors
 Fred Lin (@gasolin)
