@@ -1,7 +1,8 @@
 ### Version francisée de BlocklyDuino
 
 BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
-![Blink !](/http://www.technologiescollege.fr/blocklyduino/Capture.jpg)
+
+![Blink !](http://www.technologiescollege.fr/blocklyduino/Capture.jpg)
 
 BlocklyDuino est basé sur [Blockly](https://developers.google.com/blockly/), un éditeur de programme graphique en interface web. Il fournit un seul type de traduction de la programmation graphique _(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [exemple](http://www.technologiescollege.fr/blockly/apps/code/index.html))_, pour générer du code à copier coller dans l'IDE Arduino.
 
