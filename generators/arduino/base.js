@@ -29,17 +29,17 @@
 if (!Blockly.Language) Blockly.Language = {};
 
 Blockly.Language.base_delay = {
-  category: 'Contrôle',
+  category: 'ContrÃ´le',
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {
     this.setColour(120);
     this.appendValueInput("DELAY_TIME", Number)
-        .appendTitle("délai (en ms) de")
+        .appendTitle("dÃ©lais (en ms) de")
         .setCheck(Number);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Spécifier un temps d attente');
+    this.setTooltip('spÃ©cifier le temps de pause, en millisecondes');
   }
 };
 
@@ -49,7 +49,7 @@ Blockly.Language.base_map = {
   init: function() {
     this.setColour(230);
     this.appendValueInput("NUM", Number)
-        .appendTitle("faire la transposée ")
+        .appendTitle("faire la transposÃ©e ")
         .setCheck(Number);
     this.appendValueInput("DMAX", Number)
         .appendTitle("sur un intervalle de [0-")
@@ -58,47 +58,47 @@ Blockly.Language.base_map = {
 	      .appendTitle("]");
     this.setInputsInline(true);
     this.setOutput(true);
-    this.setTooltip('transfère une valeur sur une échelle de 0 à 1023');
+    this.setTooltip('transfÃ¨re une valeur sur une Ã©chelle de 0 Ã  1023 vers une autre Ã©chelle');
   }
 };
 
 Blockly.Language.inout_buildin_led = {
-   category: 'Entrées/Sorties',
+   category: 'EntrÃ©es/Sorties',
    helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
    init: function() {
      this.setColour(190);
      this.appendDummyInput("")
-	       .appendTitle("mettre la DEL sur la carte à l'état logique")
+	       .appendTitle("mettre la DEL sur la carte Ã  l'Ã©tat logique")
 	       .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");
      this.setPreviousStatement(true, null);
      this.setNextStatement(true, null);
-     this.setTooltip('éteint ou allume la DEL sur la carte Arduino');
+     this.setTooltip('Ã©teint ou allume la DEL sur la carte Arduino');
    }
 };
 
 Blockly.Language.inout_digital_write = {
-  category: 'Entrées/Sorties',
+  category: 'EntrÃ©es/Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
 	      .appendTitle("mettre la broche Digital")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
-      	.appendTitle("à l'état logique")
-      	.appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");
+      	.appendTitle("Ã  l'Ã©tat logique")
+      	.appendTitle(new Blockly.FieldDropdown([["1 -> 5V", "HIGH"], ["0 -> 0V", "LOW"]]), "STAT");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('écrire un état numérique 0 ou 1 sur une sortie spécifique');
+    this.setTooltip('Ã©crire un Ã©tat numÃ©rique 0 ou 1 sur une sortie spÃ©cifique');
   }
 };
 
 Blockly.Language.inout_digital_read = {
-  category: 'Entrées/Sorties',
+  category: 'EntrÃ©es/Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/DigitalRead',
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-	      .appendTitle("l'état logique de la broche Digital")
+	      .appendTitle("l'Ã©tat logique de la broche Digital")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
     this.setTooltip('');
@@ -106,12 +106,12 @@ Blockly.Language.inout_digital_read = {
 };
 
 Blockly.Language.inout_analog_write = {
-  category: 'Entrées/Sorties',
+  category: 'EntrÃ©es/Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-        .appendTitle("écrire sur la broche Analogique")
+        .appendTitle("Ã©crire sur la broche Analogique")
         .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.appendValueInput("NUM", Number)
         .appendTitle("la valeur")
@@ -119,12 +119,12 @@ Blockly.Language.inout_analog_write = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('envoyer une valeur comprise entre 0 et 255 sur une sortie spécifique');
+    this.setTooltip('envoyer une valeur comprise entre 0 et 255 sur une sortie spÃ©cifique');
   }
 };
 
 Blockly.Language.inout_analog_read = {
-  category: 'Entrées/Sorties',
+  category: 'EntrÃ©es/Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
   init: function() {
     this.setColour(230);
@@ -136,13 +136,75 @@ Blockly.Language.inout_analog_read = {
   }
 };
 
+Blockly.Language.tone = {
+  category: 'EntrÃ©es/Sorties',
+  helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
+  init: function() {
+    this.setColour(230);
+    this.appendDummyInput("")
+        .appendTitle("Ã©met un son sur la broche")
+        .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+    this.appendValueInput("NUM", Number)
+        .appendTitle("d'une frÃ©quence (Hz)")
+        .setCheck(Number);
+    this.appendValueInput("TPS", Number)
+        .appendTitle("pendant une durÃ©e (ms) de")
+        .setCheck(Number);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Ã©met un son sur la broche selectionnÃ©e');
+  }
+};
+
+Blockly.Language.notone = {
+  category: 'EntrÃ©es/Sorties',
+  helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
+  init: function() {
+    this.setColour(230);
+    this.appendDummyInput("")
+        .appendTitle("stop le son sur la broche")
+        .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")      
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('coupe le son sur la broche selectionnÃ©e');
+  }
+};
+
+
+Blockly.Language.inout_analog_read = {
+  category: 'EntrÃ©es/Sorties',
+  helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
+  init: function() {
+    this.setColour(230);
+    this.appendDummyInput("")
+        .appendTitle("la valeur lue sur l'entrÃ©e Analogique")
+        .appendTitle(new Blockly.FieldDropdown(profile.default.analog), "PIN");
+    this.setOutput(true, Number);
+    this.setTooltip('renvoie une valeur comprise entre 0 et 1023');
+  }
+};
+
 Blockly.Language.inout_highlow = {
-  category: 'Entrées/Sorties',
+  category: 'EntrÃ©es/Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/Constants',
   init: function() {
     this.setColour(230);
     this.appendDummyInput("")
-        .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), 'BOOL')
+        .appendTitle(new Blockly.FieldDropdown([["1 -> 5V", "HIGH"], ["0 -> 0V", "LOW"]]), 'BOOL')
+    this.setOutput(true, Boolean);
+    this.setTooltip(Blockly.LANG_LOGIC_BOOLEAN_TOOLTIP_1);
+  }
+};
+
+Blockly.Language.inout_onoff = {
+  category: 'EntrÃ©es/Sorties',
+  helpUrl: 'http://arduino.cc/en/Reference/Constants',
+  init: function() {
+    this.setColour(230);
+    this.appendDummyInput("")
+        .appendTitle(new Blockly.FieldDropdown([["1 -> 5V", "HIGH"], ["0 -> 0V", "LOW"]]), 'BOOL')
     this.setOutput(true, Boolean);
     this.setTooltip(Blockly.LANG_LOGIC_BOOLEAN_TOOLTIP_1);
   }
@@ -163,14 +225,14 @@ Blockly.Language.servo_move = {
     this.appendValueInput("DEGREE", Number)
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle("d'un angle (0~180°) de");
+        .appendTitle("d'un angle (0~180Â°) de");
     this.appendValueInput("DELAY_TIME", Number)
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle("pendant un délai de");
+        .appendTitle("pendant un dÃ©lai (ms) de");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('rotation possible entre 0~180 degrés');
+    this.setTooltip('rotation possible entre 0~180 degrÃ©s');
   }
 };
 
@@ -182,23 +244,23 @@ Blockly.Language.servo_read_degrees = {
     this.appendDummyInput("")
         .appendTitle("l'angle du servo-moteur")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
-        .appendTitle("connecté sur la broche")
+        .appendTitle("connectÃ© sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Number);
-    this.setTooltip('renvoie le nombre de degrés de la dernière rotation');
+    this.setTooltip('renvoie le nombre de degrÃ©s de la derniÃ¨re rotation');
   }
 };
 
 Blockly.Language.serial_print = {
-  category: 'Entrées/Sorties',
+  category: 'EntrÃ©es/Sorties',
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
     this.setColour(230);
     this.appendValueInput("CONTENT", String)
-        .appendTitle("envoyer sur le port série la donnée :");
+        .appendTitle("envoyer sur le port sÃ©rie la donnÃ©e :");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('envoies des données sur le port série pour sruvaillance par le moniteur en ASCII');
+    this.setTooltip('envoies des donnÃ©es sur le port sÃ©rie pour sruvaillance par le moniteur en ASCII');
   }
 };
 
@@ -222,6 +284,12 @@ Blockly.Arduino.inout_buildin_led = function() {
   var dropdown_stat = this.getTitleValue('STAT');
   Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(13, OUTPUT);';
   var code = 'digitalWrite(13,'+dropdown_stat+');\n'
+  return code;
+};
+
+Blockly.Arduino.notone = function() {
+  var dropdown_pin = this.getTitleValue('PIN');
+  var code = 'noTone('+dropdown_pin+');\n';
   return code;
 };
 
@@ -249,6 +317,16 @@ Blockly.Arduino.inout_analog_write = function() {
   return code;
 };
 
+Blockly.Arduino.tone = function() {
+  var dropdown_pin = this.getTitleValue('PIN');
+  //var dropdown_stat = this.getTitleValue('STAT');
+  var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
+  var value_tps = Blockly.Arduino.valueToCode(this, 'TPS', Blockly.Arduino.ORDER_ATOMIC);
+  //Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
+  var code = 'tone('+dropdown_pin+','+value_num+','+value_tps+');\n';
+  return code;
+};
+
 Blockly.Arduino.inout_analog_read = function() {
   var dropdown_pin = this.getTitleValue('PIN');
   //Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
@@ -257,6 +335,12 @@ Blockly.Arduino.inout_analog_read = function() {
 };
 
 Blockly.Arduino.inout_highlow = function() {
+  // Boolean values HIGH and LOW.
+  var code = (this.getTitleValue('BOOL') == 'HIGH') ? 'HIGH' : 'LOW';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.inout_onoff = function() {
   // Boolean values HIGH and LOW.
   var code = (this.getTitleValue('BOOL') == 'HIGH') ? 'HIGH' : 'LOW';
   return [code, Blockly.Arduino.ORDER_ATOMIC];

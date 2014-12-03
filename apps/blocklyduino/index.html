@@ -1,3 +1,4 @@
+﻿<!DOCTYPE xhtml>
 <html manifest=node.manifest>
 <head>
   <link rel="icon" type="image/png" href="favicon.bmp" />
@@ -8,37 +9,12 @@
   <script type="text/javascript" src="Blob.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
   <script type="text/javascript" src="blockly_helper.js"></script>
+  <script src="../jquery.min.js"></script>
+  <script src="compilerflasher.js" type="text/javascript"></script>
+  <script src="../bootstrap.min.js"></script>
   <script>
-  // Whitelist of blocks to keep.
-  /*var newLanguage = {}
-  var keepers = ['controls_loop', 'controls_delay', 'control_map',
-      //'setup_pinmode', 'output_digital_write', 'output_analog_write',
-      //'controls_if', 'controls_if_if', 'controls_if_elseif',
-      //'controls_if_else', 'controls_whileUntil', 'controls_for',
-      //'controls_flow_statements',
-      //'math_number','math_arithmetic',//'math_modulo',
-      //'logic_compare', 'logic_operation', 'logic_negate', 'logic_boolean',
-      //'variables_get','variables_set',
-      //'procedures_defnoreturn', 'procedures_defreturn', 'procedures_callnoreturn', 'procedures_callreturn'
-      ];
-  for (var x = 0; x < keepers.length; x++) {
-    newLanguage[keepers[x]] = Blockly.Language[keepers[x]];
-  }
-  // Fold control category into logic category.
-  for (var name in newLanguage) {
-    if (newLanguage[name].category == 'Math') {
-      newLanguage[name].category = 'Logic';
-    }
-  }
-  Blockly.Language = newLanguage;*/
-
-  // traduction et finitions : Sébastien Canet
   
-/**
- * List of tab names.
- * @private
- */
-var TABS_ = ['blocks', 'arduino', 'xml'];
+var TABS_ = ['blocks', 'arduino', 'term' , 'xml' ];
 
 var selected = 'blocks';
 
@@ -56,7 +32,7 @@ function tabClick(id) {
       xmlDom = Blockly.Xml.textToDom(xmlText);
     } catch (e) {
       var q =
-          window.confirm('Error parsing XML:\n' + e + '\n\nAbandon changes?');
+          window.confirm('Erreur dans le fichier XML :\n' + e + '\n\nVoulez-vous abandonner les changements ?');
       if (!q) {
         // Leave the user on the XML tab.
         return;
@@ -86,6 +62,12 @@ function tabClick(id) {
 /**
  * Populate the currently selected pane with content generated from the blocks.
  */
+function upload(){
+var arduinoTextarea = document.getElementById('textarea_arduino');
+    arduinoTextarea.value = Blockly.Generator.workspaceToCode('Arduino');
+
+
+}
 function renderContent() {
   var content = document.getElementById('content_' + selected);
   // Initialize the pane.
@@ -108,10 +90,39 @@ function renderContent() {
   } else if (content.id == 'content_arduino') {
     //content.innerHTML = Blockly.Generator.workspaceToCode('Arduino');
     var arduinoTextarea = document.getElementById('textarea_arduino');
+   
     arduinoTextarea.value = Blockly.Generator.workspaceToCode('Arduino');
     arduinoTextarea.focus();
   }
 }
+
+
+function getFiles(){
+// return {"sketch.ino": Blockly.Generator.workspaceToCode('Arduino') }
+//$('textarea#textarea_arduino').val() //&lt; et &lt;
+    var code = $('textarea#textarea_arduino').val();
+    code=code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    //code=code.replace(">","&gt;");
+    //code = "<![CDATA[" + code + "]]>";
+    //document.write (code); 
+    return {"sketch.ino": code }
+}
+
+$(document).ready(function(){
+    compilerflasher = new compilerflasher(getFiles);
+    compilerflasher.on("pre_verify", function(){
+		$("#event_msg").append('pre_verify event fired!<br/><br/>')
+		$("#debug_arduino").html('Vérification .... ');
+    });
+    compilerflasher.on("verification_succeed", function(binary_size){
+        $("#event_msg").append('verification_succeed event fired! Sketch size: '+binary_size+"<br/><br/>")
+        $("#debug_arduino").html('Vérification terminée : '+binary_size);
+    });
+    compilerflasher.on("verification_failed", function(error_output){
+        $("#event_msg").append("verification_failed event fired! \nCompilation error: <pre>"+error_output+"</pre><br/><br/>")  
+        $("#debug_arduino").html(error_output);
+    });
+});
 
 /**
  * Initialize Blockly.  Called on page load.
@@ -153,6 +164,7 @@ function init(blockly) {
       margin: 0;
       padding:0;
       overflow: hidden;
+      
     }
     .blocklySvg {
       height: 100%;
@@ -200,18 +212,19 @@ function init(blockly) {
       margin: 0;
       padding: 0;
       border: none;
+      
     }
     td {
       padding: 0;
     }
-    pre,
+  
     #content_xml,
     #content_arduino {
       width: 100%;
       height: 100%;
       padding: 0;
       margin: 0;
-      border: 1px solid #ccc;
+      border: 1px solid #cdc;
       border-top-style: none;
       overflow: hidden;
       display: none;
@@ -223,19 +236,115 @@ function init(blockly) {
       border: none;
       resize: none;
     }
+    #textarea_arduino{
+      padding: 1px 1em;
+      height: 500px;
+      overflow: auto;
+      width: 100%;
+      background-color: rgba(8, 8, 8, 1);
+      color : rgba(29, 147, 47, 1);
+      font-size: 20px;
+      line-height: 20px;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+    #debug_arduino{
+      height: 200px;
+      border-width:2px;
+      border-color:black;
+      background-color: rgba(8, 8, 8, 1);
+      color : rgba(29, 147, 47, 1);
+      overflow: auto;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+
+    }
+    #serial_hud {
+      height: 500px;
+      overflow: auto;
+      width: 100%;
+      background-color: rgba(8, 8, 8, 1);
+      color : rgba(29, 147, 47, 1);
+      font-size: 20px;
+      line-height: 20px;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+    #cb_cf_boards, #cb_cf_ports,#cb_cf_baud_rates {
+      
+    border: 1px solid #CCC;
+    border-top-width: 1px;
+    border-right-width-value: 1px;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-bottom-width: 1px;
+    border-left-width-value: 1px;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-top-style: solid;
+    border-right-style-value: solid;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-bottom-style: solid;
+    border-left-style-value: solid;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-top-color: #CCC;
+    border-right-color-value: rgb(204, 204, 204);
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-bottom-color: #CCC;
+    border-left-color-value: rgb(204, 204, 204);
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image-source: none;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-width: 1 1 1 1;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+      background-color: rgba(242, 242, 242, 1);
+    }
+
+    #content_term {
+      
+           
+            width: 100%;
+            height:100%;
+    }
+    #cb_cf_serial_monitor{
+            width: 100%;
+            height:100%;
+}
+             
+    }
+    #textarea_term {
+      width: 100%;
+      height: 100%;
+      border: none;
+      
+    }
     iframe {
       width: 100%;
       height: 100%;
       border: 1px solid #ccc;
       border-top-style: none;
+      
     }
     button {
       padding: 1px 1em;
-      font-size: 90%;
+      font-size: 100%;
       border-radius: 4px;
       border: 1px solid #ddd;
       background-color: #eee;
       color: black;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     }
     button.launch {
       border: 1px solid #d43;
@@ -254,7 +363,7 @@ function init(blockly) {
   <table height="100%" width="100%">
     <tr>
       <td>
-        <img src="Arduino-uno-perspective-transparent.png" border="0" align="left" height=76/><h3>BlocklyDuino<br>éditeur graphique pour aider à la programmation des interfaces Arduino</h3>
+        <img src="Arduino-uno-perspective-transparent.png" border="0" align="left" height=76/><h3>BlocklyDuino<br>éditeur graphique pour aider à la programmation des interfaces Arduino</h3>        
       </td>
     </tr>
     <tr>
@@ -269,12 +378,16 @@ function init(blockly) {
             <td class="tabmin">&nbsp;</td>
             <td id="tab_python" class="taboff" onclick="tabClick(this.id)">Python</td>
             <td class="tabmin">&nbsp;</td-->
-            <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">Arduino</td>
-            <td class="tabmin">&nbsp;</td>
+            <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">Code_Arduino</td>
+            <td class="tabmin">&nbsp;</td>            
+            <td id="tab_term" class="taboff" onclick="tabClick(this.id)">Console_Série</td>
+			<td class="tabmin">&nbsp;</td>    
             <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">XML</td>
+			<td class="tabmin">&nbsp;</td>    
             <td class="tabmax">
-              <button onclick="discard()">Réinitialiser</button>
-              <button onclick="save()">Sauver au format XML</button>
+              
+              <button onclick="discard()">Annuler</button>
+              <button onclick="save()">Sauver en XML</button>
               <button id="fakeload">Charger un fichier XML</button>
               <input type="file" id="load" style="display: none;"/>
               <!--button class="launch" onclick="runJS()">Run Program</button-->
@@ -282,6 +395,7 @@ function init(blockly) {
           </tr>
         </table>
       </td>
+ 
     </tr>
     <tr>
       <td height="99%">
@@ -289,20 +403,31 @@ function init(blockly) {
 		<!--div id="content_blocks" style="height:auto !important;height:400px; min-height:400px;"></div-->
         <!--pre id="content_javascript"></pre>
         <pre id="content_dart"></pre-->
-        <div id="content_arduino">
-          <textarea id="textarea_arduino" readonly></textarea>
+        <div id="content_arduino">          
+          <select id="cb_cf_boards"></select><select id="cb_cf_ports"></select>
+              <button id="cb_cf_verify_btn" class="btn btn-success">Vérifier le code</button>
+              <button id="cb_cf_flash_btn" class="btn btn-success">Téléverser dans l'Arduino ! </button>           
+              <textarea id="textarea_arduino"></textarea>
+              <p id="cb_cf_operation_output"></p>
+              <div id="debug_arduino"></div>
         </div>
         <!--pre id="content_python"></pre-->
         <div id="content_xml">
           <textarea id="textarea_xml" readonly></textarea>
         </div>
+        <div id="content_term">
+          <select id="cb_cf_baud_rates"></select>
+          <button id="cb_cf_serial_monitor_connect">Ouvrir la console Série</button>
+          <div id="cb_cf_serial_monitor"></div>  
+        </div>
       </td>
     </tr>
 	<tr>
 		<td>
-			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions Sébastien Canet</i>
+			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions et adaptations Sébastien Canet, sur la reprise intégrale du code amélioré par Julien Rat</i>
 		</td>
 	</tr>
-</table>
+  </table>
+
 </body>
 </html>

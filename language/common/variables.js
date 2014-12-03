@@ -55,8 +55,7 @@ Blockly.Language.variables_set = {
     this.appendValueInput('VALUE')
         .appendTitle(Blockly.LANG_VARIABLES_SET_TITLE)
         .appendTitle(new Blockly.FieldVariable(
-        Blockly.LANG_VARIABLES_SET_ITEM), 'VAR')
-		.appendTitle(Blockly.LANG_VARIABLES_SET_TEXT);
+        Blockly.LANG_VARIABLES_SET_ITEM), 'VAR');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.LANG_VARIABLES_SET_TOOLTIP);

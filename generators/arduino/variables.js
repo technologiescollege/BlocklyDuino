@@ -23,7 +23,7 @@
  */
 'use strict';
 
-if (!Blockly.Language) Blockly.Language = {};
+//if (!Blockly.Language) Blockly.Language = {};
 
 Blockly.Language.variables_get = {
   // Variable getter.
@@ -55,7 +55,7 @@ Blockly.Language.variables_declare = {
   init: function() {
     this.setColour(330);
     this.appendValueInput('VALUE', null)
-        .appendTitle('déclare la variable')
+        .appendTitle("déclare la variable")
         .appendTitle(new Blockly.FieldVariable(
         Blockly.LANG_VARIABLES_SET_ITEM), 'VAR')
         .appendTitle("comme un")

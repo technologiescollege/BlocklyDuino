@@ -68,8 +68,8 @@ Blockly.Arduino.ORDER_NONE = 99;          // (...)
  */
 var profile = {
 	arduino: {
-		description: "Arduino carte standard-compatible",
-		digital : [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"], ["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"]],
+		description: "Arduino carte standard ou compatible",
+		digital : [["0", "0"],["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"], ["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"]],
 		analog : [["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"]],
         serial : 9600,
 	},
@@ -91,6 +91,8 @@ Blockly.Arduino.init = function() {
   Blockly.Arduino.definitions_ = {};
   // Create a dictionary of setups to be printed before the code.
   Blockly.Arduino.setups_ = {};
+  Blockly.Arduino.loopconst_ = {};
+  Blockly.Arduino.loopconstinit_ = {};
   
   if (Blockly.Variables) {
     if (!Blockly.Arduino.variableDB_) {
@@ -120,7 +122,7 @@ Blockly.Arduino.finish = function(code) {
   // Indent every line.
   code = '  ' + code.replace(/\n/g, '\n  ');
   code = code.replace(/\n\s+$/, '\n');
-  code = 'void loop() \n{\n' + code + '\n}';
+  //code = 'void loop() \n{\n' + code + '\n}';
 
   // Convert the definitions dictionary into a list.
   var imports = [];
@@ -131,17 +133,26 @@ Blockly.Arduino.finish = function(code) {
       imports.push(def);
     } else {
       definitions.push(def);
-    }
+    } 
   }
-  
+  var loopconst = [];
+  for (var name in Blockly.Arduino.loopconst_) {
+    loopconst.push(Blockly.Arduino.loopconst_[name]);
+  }
+  var loopconstinit = [];
+  for (var name in Blockly.Arduino.loopconstinit_) {
+    loopconstinit.push(Blockly.Arduino.loopconstinit_[name]);
+  }
   // Convert the setups dictionary into a list.
   var setups = [];
   for (var name in Blockly.Arduino.setups_) {
     setups.push(Blockly.Arduino.setups_[name]);
   }
   
-  var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
-  return allDefs.replace(/\n\n+/g, '\n\n').replace(/\n*$/, '\n\n\n') + code;
+  var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n'+ '\nvoid loop() \n{\n  '+loopconstinit.join('\n  ')+code+'  '+loopconst.join('\n  ') + '\n}'+ '\n\n';
+  return allDefs.replace(/\n\n+/g, '\n\n').replace(/\n*$/, '\n\n\n');
+  
+
 };
 
 /**
@@ -151,7 +162,9 @@ Blockly.Arduino.finish = function(code) {
  * @return {string} Legal line of code.
  */
 Blockly.Arduino.scrubNakedValue = function(line) {
+
   return line + ';\n';
+
 };
 
 /**
