@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Visual Blocks Language
  *
  * Copyright 2012 Google Inc.
@@ -23,7 +23,7 @@
  */
 'use strict';
 
-//if (!Blockly.Language) Blockly.Language = {};
+if (!Blockly.Language) Blockly.Language = {};
 
 Blockly.Language.variables_get = {
   // Variable getter.
@@ -32,7 +32,7 @@ Blockly.Language.variables_get = {
   init: function() {
     this.setColour(330);
     this.appendDummyInput("")
-        .appendTitle(Blockly.LANG_VARIABLES_GET_TITLE_1)
+        .appendTitle("la valeur de")
         .appendTitle(new Blockly.FieldVariable(
         Blockly.LANG_VARIABLES_GET_ITEM), 'VAR');
     this.setOutput(true, null);
@@ -55,7 +55,7 @@ Blockly.Language.variables_declare = {
   init: function() {
     this.setColour(330);
     this.appendValueInput('VALUE', null)
-        .appendTitle("d�clare la variable")
+        .appendTitle("déclare la variable")
         .appendTitle(new Blockly.FieldVariable(
         Blockly.LANG_VARIABLES_SET_ITEM), 'VAR')
         .appendTitle("comme un")
@@ -82,9 +82,10 @@ Blockly.Language.variables_set = {
   init: function() {
     this.setColour(330);
     this.appendValueInput('VALUE')
-        .appendTitle(Blockly.LANG_VARIABLES_SET_TITLE_1)
+        .appendTitle("mettre la variable")
         .appendTitle(new Blockly.FieldVariable(
-        Blockly.LANG_VARIABLES_SET_ITEM), 'VAR');
+        Blockly.LANG_VARIABLES_SET_ITEM), 'VAR')
+		.appendTitle("à");
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.LANG_VARIABLES_SET_TOOLTIP_1);
