@@ -1,7 +1,7 @@
 Version francisée de BlocklyDuino
 =====
 
-BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/)**.
+BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/) et sa _traduction en code_**.
 
 ![Blink !](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/Capture.jpg)
 
