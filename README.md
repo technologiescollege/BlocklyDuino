@@ -33,7 +33,7 @@ Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/
 
 ## Utiliser en local dans son navigateur web
 
-Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_Download Zip_) et d'ouvrir le fichier `index.html` dans votre navigateur.
+Si vous préfréez l'utiliser en local, il vous suffit de télécharger le code depuis Github (_[Download Zip](https://github.com/technologiescollege/BlocklyDuino/archive/master.zip)_) et d'ouvrir le fichier `index.html` dans votre navigateur.
 
 Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
 
