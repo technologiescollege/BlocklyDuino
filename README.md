@@ -47,19 +47,14 @@ Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux po
 
 ## Auteurs et contributeurs
 Fred Lin (@gasolin)
-
 Merci à Neil Fraser, Q.Neutron de Blockly http://code.google.com/p/blockly/
-
 Merci à l'équipe d'Arduino et Seeeduino pour les blocs spécifiques.
-
 Ce projet s'est aussi inspiré de [arduiblock](https://github.com/taweili/ardublock) et [modkit](http://www.modk.it/)
-
 Modifications, simplifications et françisation par Sébastien Canet.
 
 ## Licence
 
 Copyright (C) 2012~2014 Fred Lin gasolin+blockly@gmail.com
-
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
