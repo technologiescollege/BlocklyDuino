@@ -15,21 +15,21 @@ Cette version a été françisée et réorganisée pour la faire utiliser au mie
 
 ## Fonctions
 
-* Programmation pour Arduino en drag'n'drop graphique
-* Génère un code totalement compatible avec le code Arduino
-* Interaction des cartes Arduino grâce aux modules Grove rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove
-* Possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL _(voir les démos ci-dessous)_
+* programmation pour Arduino en drag'n'drop graphique,
+* génère un code totalement compatible avec le code Arduino,
+* interaction des cartes Arduino grâce aux modules Grove rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove,
+* possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL _(voir les démos ci-dessous)._
 
 ## Démos
 
-BlocklyDuino un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
+BlocklyDuino est un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
 [Technologies/BlocklyDuino](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html) 
 
 Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (_ou tout en local_) :
 * [démo 1 : faire clignoter une diode](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/blink.xml)
 * [démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre](http://www.technologiescollege.fr/blocklyduino/apps/blocklyduino/index.html?url=/blocklyduino/apps/blocklyduino/exemples/servo_potentio.xml)
 
-Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/watch?v=_swiyXcUvNY)
+Le créateur de BlocklyDuino a aussi posté une [vidéo](http://www.youtube.com/watch?v=_swiyXcUvNY).
 
 ## Utiliser en local dans son navigateur web
 
