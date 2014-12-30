@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Visual Blocks Language
  *
  * Copyright 2012 Fred Lin.
