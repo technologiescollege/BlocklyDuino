@@ -101,7 +101,25 @@ Blockly.Language.inout_digital_read = {
 	      .appendTitle("l'état logique de la broche Digital")
 	      .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, Boolean);
-    this.setTooltip('');
+    this.setTooltip("lecture de l'état numérique 0 ou 1 de la broche digital");
+  }
+};
+
+Blockly.Language.inout_PWM_write = {
+  category: 'Entrées/Sorties',
+  helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
+  init: function() {
+    this.setColour(230);
+    this.appendDummyInput("")
+        .appendTitle("écrire sur la broche PWM~")
+        .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+    this.appendValueInput("NUM", Number)
+        .appendTitle("la valeur")
+        .setCheck(Number);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('envoyer une valeur comprise entre 0 et 255 sur une sortie spécifique\nATTENTION à vérifier le n° sur la carte !');
   }
 };
 
@@ -314,6 +332,13 @@ Blockly.Arduino.inout_analog_write = function() {
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
   //Blockly.Arduino.setups_['setup_output'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
   var code = 'analogWrite('+dropdown_pin+','+value_num+');\n';
+  return code;
+};
+
+Blockly.Arduino.inout_PWM_write = function() {
+  var dropdown_pin = this.getTitleValue('PIN');
+  var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC); //value_num est la valeur de la variable NUM
+  var code = 'analogWrite('+dropdown_pin+','+value_num+');\n'; // le code qui sera dans le loop
   return code;
 };
 
