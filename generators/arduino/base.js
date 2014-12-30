@@ -112,7 +112,7 @@ Blockly.Language.inout_PWM_write = {
     this.setColour(230);
     this.appendDummyInput("")
         .appendTitle("écrire sur la broche PWM~")
-        .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+        .appendTitle(new Blockly.FieldDropdown(profile.default.PWM), "PIN");
     this.appendValueInput("NUM", Number)
         .appendTitle("la valeur")
         .setCheck(Number);
