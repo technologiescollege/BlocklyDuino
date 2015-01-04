@@ -51,7 +51,7 @@ Blockly.MSG_RENAME_VARIABLE_TITLE = 'Renommer les "%1" variables en :';
 
 // Toolbox.
 Blockly.MSG_VARIABLE_CATEGORY = 'Variables';
-Blockly.MSG_PROCEDURE_CATEGORY = 'Procédures';
+Blockly.MSG_PROCEDURE_CATEGORY = 'Fonctions - Procédures';
 
 // Colour Blocks.
 Blockly.LANG_CATEGORY_COLOUR = 'Couleur';
@@ -395,25 +395,25 @@ Blockly.LANG_LISTS_SET_INDEX_TOOLTIP = 'Sets the value at the specified position
 Blockly.LANG_VARIABLES_GET_HELPURL = 'http://en.wikipedia.org/wiki/Variable_(computer_science)';
 Blockly.LANG_VARIABLES_GET_TITLE = 'la valeur de';
 Blockly.LANG_VARIABLES_GET_ITEM = 'item';
-Blockly.LANG_VARIABLES_GET_TOOLTIP = 'Returns the value of this variable.';
+Blockly.LANG_VARIABLES_GET_TOOLTIP = 'renvoie la valeur de la variable';
 
 Blockly.LANG_VARIABLES_SET_HELPURL = 'http://en.wikipedia.org/wiki/Variable_(computer_science)';
 Blockly.LANG_VARIABLES_SET_TITLE = 'mettre';
 Blockly.LANG_VARIABLES_SET_ITEM = 'item';
 Blockly.LANG_VARIABLES_SET_TEXT = 'à';
-Blockly.LANG_VARIABLES_SET_TOOLTIP = 'Sets this variable to be equal to the input.';
+Blockly.LANG_VARIABLES_SET_TOOLTIP = "assigne la variable pour être égale à l'entrée";
 
 // Procedures Blocks.
 Blockly.LANG_PROCEDURES_DEFNORETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
 Blockly.LANG_PROCEDURES_DEFNORETURN_PROCEDURE = 'fonction';
 Blockly.LANG_PROCEDURES_DEFNORETURN_DO = 'faire';
-Blockly.LANG_PROCEDURES_DEFNORETURN_TOOLTIP = 'une procedure qui ne retourne pas de valeur';
+Blockly.LANG_PROCEDURES_DEFNORETURN_TOOLTIP = 'une procedure ne retourne pas de valeur';
 
 Blockly.LANG_PROCEDURES_DEFRETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
 Blockly.LANG_PROCEDURES_DEFRETURN_PROCEDURE = Blockly.LANG_PROCEDURES_DEFNORETURN_PROCEDURE;
 Blockly.LANG_PROCEDURES_DEFRETURN_DO = Blockly.LANG_PROCEDURES_DEFNORETURN_DO;
 Blockly.LANG_PROCEDURES_DEFRETURN_RETURN = 'retourner';
-Blockly.LANG_PROCEDURES_DEFRETURN_TOOLTIP = 'une fonction qui retourne un résultat';
+Blockly.LANG_PROCEDURES_DEFRETURN_TOOLTIP = 'une fonction renvoie un résultat';
 
 Blockly.LANG_PROCEDURES_DEF_DUPLICATE_WARNING = 'Attention :\n' +
     'Cette fonction possède\n' +
@@ -427,14 +427,14 @@ Blockly.LANG_PROCEDURES_CALLNORETURN_TOOLTIP = 'appelle une fonction qui ne reto
 Blockly.LANG_PROCEDURES_CALLRETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
 Blockly.LANG_PROCEDURES_CALLRETURN_CALL = Blockly.LANG_PROCEDURES_CALLNORETURN_CALL;
 Blockly.LANG_PROCEDURES_CALLRETURN_PROCEDURE = Blockly.LANG_PROCEDURES_CALLNORETURN_PROCEDURE;
-Blockly.LANG_PROCEDURES_CALLRETURN_TOOLTIP = 'une fonction qui retourne un résultat';
+Blockly.LANG_PROCEDURES_CALLRETURN_TOOLTIP = 'une fonction renvoie un résultat';
 
 Blockly.LANG_PROCEDURES_MUTATORCONTAINER_TITLE = 'paramètres';
 Blockly.LANG_PROCEDURES_MUTATORARG_TITLE = 'variable :';
 
 Blockly.LANG_PROCEDURES_HIGHLIGHT_DEF = 'Highlight Procedure';
 
-Blockly.LANG_PROCEDURES_IFRETURN_TOOLTIP = 'If a value is true, then return a value.';
+Blockly.LANG_PROCEDURES_IFRETURN_TOOLTIP = 'SI la condition est VRAI alors renvoie une valeur';
 Blockly.LANG_PROCEDURES_IFRETURN_WARNING = 'Warning:\n' +
     'This block may only be\n' +
     'used within a procedure.';

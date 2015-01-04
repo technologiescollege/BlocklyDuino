@@ -30,7 +30,7 @@
 if (!Blockly.Language) Blockly.Language = {};
 
 Blockly.Language.grove_led = {
-  category: 'Grove : actionneurs',
+  category: 'TechnoZone51 : actionneurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED',
   init: function() {
     this.setColour(190);
@@ -466,7 +466,7 @@ Blockly.Language.grove_rgb_led_item = {
 };
 
 Blockly.Language.grove_bluetooth_slave = {
-  category: 'Grove : communication',
+  category: 'Reseau',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Serial_Bluetooth',
   init: function() {
     this.setColour(190);

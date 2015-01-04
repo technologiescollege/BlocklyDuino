@@ -63,10 +63,10 @@ Blockly.Language.base_map = {
 };
 
 Blockly.Language.inout_buildin_led = {
-   category: 'Entrées/Sorties',
+   category: 'Sorties',
    helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
    init: function() {
-     this.setColour(190);
+     this.setColour(230);
      this.appendDummyInput("")
 	       .appendTitle("mettre la DEL sur la carte à l'état logique")
 	       .appendTitle(new Blockly.FieldDropdown([["1", "HIGH"], ["0", "LOW"]]), "STAT");
@@ -77,7 +77,7 @@ Blockly.Language.inout_buildin_led = {
 };
 
 Blockly.Language.inout_digital_write = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
   init: function() {
     this.setColour(230);
@@ -93,7 +93,7 @@ Blockly.Language.inout_digital_write = {
 };
 
 Blockly.Language.inout_digital_read = {
-  category: 'Entrées/Sorties',
+  category: 'Entrées',
   helpUrl: 'http://arduino.cc/en/Reference/DigitalRead',
   init: function() {
     this.setColour(230);
@@ -106,7 +106,7 @@ Blockly.Language.inout_digital_read = {
 };
 
 Blockly.Language.inout_PWM_write = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -124,7 +124,7 @@ Blockly.Language.inout_PWM_write = {
 };
 
 Blockly.Language.inout_analog_write = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -142,7 +142,7 @@ Blockly.Language.inout_analog_write = {
 };
 
 Blockly.Language.inout_analog_read = {
-  category: 'Entrées/Sorties',
+  category: 'Entrées',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
   init: function() {
     this.setColour(230);
@@ -155,7 +155,7 @@ Blockly.Language.inout_analog_read = {
 };
 
 Blockly.Language.tone = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -176,7 +176,7 @@ Blockly.Language.tone = {
 };
 
 Blockly.Language.notone = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -192,7 +192,7 @@ Blockly.Language.notone = {
 
 
 Blockly.Language.inout_analog_read = {
-  category: 'Entrées/Sorties',
+  category: 'Entrées',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
   init: function() {
     this.setColour(230);
@@ -205,7 +205,7 @@ Blockly.Language.inout_analog_read = {
 };
 
 Blockly.Language.inout_highlow = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/Constants',
   init: function() {
     this.setColour(230);
@@ -217,7 +217,7 @@ Blockly.Language.inout_highlow = {
 };
 
 Blockly.Language.inout_onoff = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://arduino.cc/en/Reference/Constants',
   init: function() {
     this.setColour(230);
@@ -270,7 +270,7 @@ Blockly.Language.servo_read_degrees = {
 };
 
 Blockly.Language.serial_print = {
-  category: 'Entrées/Sorties',
+  category: 'Sorties',
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
     this.setColour(230);
