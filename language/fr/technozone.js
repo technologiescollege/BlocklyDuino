@@ -22,12 +22,12 @@ if (!Blockly.Language) Blockly.Language = {};
 
 Blockly.Language.technozone_led = {
   category: 'TechnoZone51 : actionneurs',
-  helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#LED',
+  helpUrl: 'http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:led1',
   init: function() {
     this.setColour(190);
     this.appendDummyInput("")
         .appendTitle("mettre la DEL")
-        .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/e/e0/LED1.jpg/400px-LED1.jpg", 64, 64))
+        .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/56-cart_default/kit-carte-sortie-led.jpg", 64, 64))
         .appendTitle("sur la broche")
         .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
         .appendTitle("à l'état")
@@ -41,8 +41,8 @@ Blockly.Language.technozone_led = {
 Blockly.Arduino.technozone_led = function() {
   var dropdown_pin = this.getTitleValue('PIN');
   var dropdown_stat = this.getTitleValue('STAT');
-  Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'
+  Blockly.Arduino.setups_['setup_green_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);'; //code à insérer dans le setup Arduino
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n'  //code à insérer dans la loop Arduino
   return code;
 };
 

@@ -7,7 +7,7 @@
   <script type="text/javascript" src="../../generators/arduino/base.js"></script>
   <script type="text/javascript" src="../../generators/arduino/variables.js"></script>
   <script type="text/javascript" src="../../generators/arduino/procedures.js"></script>
-  <script type="text/javascript" src="../../generators/arduino/grove.js"></script>
+  <!--script type="text/javascript" src="../../generators/arduino/grove.js"></script-->
   <script type="text/javascript" src="../../generators/arduino/custom.js"></script>
   <script type="text/javascript" src="../../generators/arduino/control.js"></script>
   <script type="text/javascript" src="../../generators/arduino/logic.js"></script>
@@ -23,6 +23,9 @@
   <script type="text/javascript" src="../../language/common/variables.js"></script>
   <script type="text/javascript" src="../../language/common/procedures.js"></script>
   <script type="text/javascript" src="../../language/fr/technozone.js"></script>
+  <script type="text/javascript" src="../../language/fr/grove.js"></script>  
+  <script type="text/javascript" src="../../language/fr/duinoedu.js"></script>
+  <script type="text/javascript" src="../../language/fr/makeblock.js"></script>  
   
   <style>
     html, body {
@@ -42,23 +45,22 @@
       var newLanguage = {}
       var keepers = [
 		  //io
-          'inout_digital_read', 'inout_analog_read',
-		  'inout_highlow',
-          'inout_digital_write', 'inout_PWM_write','inout_analog_write',
-          'serial_print', 'inout_buildin_led','tone','notone',
+          'inout_digital_read', 'inout_analog_read', 'inout_highlow',
+          'inout_digital_write', 'inout_PWM_write', 'inout_analog_write',
+          'serial_print', 'inout_buildin_led', 'tone', 'notone',
           //servo
           'servo_move', 'servo_read_degrees',
 		  //control
-          'base_delay', 'controls_if', 'controls_if_if', 'controls_if_elseif', 'controls_if_else', 'controls_for',
+          'base_delay', 'controls_if', 'controls_for', 'controls_if_if', 'controls_if_elseif', 'controls_if_else', 
           'controls_whileUntil', 'controls_flow_statements',
           //procedure
-          'procedures_defnoreturn', 'procedures_defreturn', 'procedures_callnoreturn', 'procedures_callreturn', 'procedures_mutatorcontainer', 'procedures_mutatorarg', 'procedures_ifreturn',
+          'procedures_defnoreturn', 'procedures_defreturn', 'procedures_callnoreturn', 'procedures_callreturn', 'procedures_ifreturn','procedures_mutatorcontainer', 'procedures_mutatorarg',
 		  //logic
           'logic_compare', 'logic_operation', 'logic_negate', 'logic_null','logic_boolean',
 		  //math
           'base_map','math_number','math_arithmetic',//'math_modulo',
            //text
-          'text', //'text_join','text_create_join_container','text_create_join_item',
+          'text', 'text_join','text_create_join_container','text_create_join_item',
 		  //variable
           'variables_get','variables_set', 'variables_declare',
           
@@ -66,9 +68,10 @@
           //'custom_read','custom_write',
           //arduilab
 		  'temperature','humidite',
+		  //duinoedu
+		  'duinoedu_joystick',
 		  //grove actionneurs
-          'grove_led', 'grove_relay',
-          'grove_piezo_buzzer',
+          'grove_led', 'grove_relay', 'grove_piezo_buzzer', 'grove_motor_shield',
           'grove_rgb_led', 'grove_rgb_led_container', 'grove_rgb_led_item',
 		  //grove analog
           'grove_rotary_angle', 'grove_temporature_sensor', 'grove_sound_sensor', 'grove_thumb_joystick', 'grove_ultrasonic_ranger',
@@ -77,12 +80,11 @@
 		  //grove bluetooth
           'grove_bluetooth_slave',
 		  //grove LCD
-          'grove_serial_lcd_print', 'grove_serial_lcd_power',
-          'grove_serial_lcd_effect',
-          //grove motor
-          'grove_motor_shield',
+          'grove_serial_lcd_print', 'grove_serial_lcd_power', 'grove_serial_lcd_effect',
 		  //insectbot
 		  'scanbot', 'forwardbot','moveBackRight','moveTurnLeft','blinkybot','temperature','humidite','afficheur',
+		  //makeblock
+		  'me_rgb_led',
 		  //TechnoZone51
 		  'technozone_led'
           ];

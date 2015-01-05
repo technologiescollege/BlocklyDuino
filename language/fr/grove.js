@@ -48,7 +48,7 @@ Blockly.Language.grove_led = {
 };
 
 Blockly.Language.grove_button = {
-  category: 'Grove : capteurs numériques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Button',
   init: function() {
     this.setColour(190);
@@ -63,7 +63,7 @@ Blockly.Language.grove_button = {
 };
 
 Blockly.Language.grove_rotary_angle = {
-  category: 'Grove : capteurs analogiques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Potentiometer',
   init: function() {
     this.setColour(10);
@@ -78,7 +78,7 @@ Blockly.Language.grove_rotary_angle = {
 };
 
 Blockly.Language.grove_tilt_switch = {
-  category: 'Grove : capteurs numériques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/index.php?title=GROVE_-_Starter_Bundle_V1.0b#Tilt_switch',
   init: function() {
     this.setColour(190);
@@ -129,7 +129,7 @@ Blockly.Language.grove_relay = {
 };
 
 Blockly.Language.grove_temporature_sensor = {
-  category: 'Grove : capteurs analogiques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Project_Seven_-_Temperature',
   init: function() {
     this.setColour(10);
@@ -214,7 +214,7 @@ category: 'Grove : écran LCD',
 };
 
 Blockly.Language.grove_sound_sensor = {
-  category: 'Grove : capteurs analogiques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Sound_Sensor',
   init: function() {
     this.setColour(10);
@@ -229,7 +229,7 @@ Blockly.Language.grove_sound_sensor = {
 };
 
 Blockly.Language.grove_pir_motion_sensor = {
-  category: 'Grove : capteurs numériques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_PIR_Motion_Sensor',
   init: function() {
     this.setColour(190);
@@ -244,7 +244,7 @@ Blockly.Language.grove_pir_motion_sensor = {
 };
 
 Blockly.Language.grove_line_finder = {
-  category: 'Grove : capteurs numériques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Line_Finder',
   init: function() {
     this.setColour(190);
@@ -259,7 +259,7 @@ Blockly.Language.grove_line_finder = {
 };
 
 Blockly.Language.grove_ultrasonic_ranger = {
-  category: 'Grove : capteurs analogiques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger',
   init: function() {
     this.setColour(190);
@@ -276,7 +276,7 @@ Blockly.Language.grove_ultrasonic_ranger = {
 };
 
 Blockly.Language.grove_motor_shield = {
-  category: 'Grove : moteurs',
+  category: 'Grove : actionneurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Motor_Shield',
   init: function() {
     this.setColour(190);
@@ -296,7 +296,7 @@ Blockly.Language.grove_motor_shield = {
 };
 
 Blockly.Language.grove_thumb_joystick = {
-  category: 'Grove : capteurs analogiques',
+  category: 'Grove : capteurs',
   helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Thumb_Joystick',
   init: function() {
     this.setColour(10);

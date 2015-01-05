@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Visual Blocks Language
  *
  * Copyright 2012 Google Inc.
@@ -265,15 +265,15 @@ Blockly.LANG_TEXT_TEXT_HELPURL = 'http://en.wikipedia.org/wiki/String_(computer_
 Blockly.LANG_TEXT_TEXT_TOOLTIP = 'une lettre, un mot, ou une ligne de texte';
 
 Blockly.LANG_TEXT_JOIN_HELPURL = '';
-Blockly.LANG_TEXT_JOIN_TITLE_CREATEWITH = 'create text with';
-Blockly.LANG_TEXT_JOIN_TOOLTIP = 'Create a piece of text by joining\n' +
-    'together any number of items.';
+Blockly.LANG_TEXT_JOIN_TITLE_CREATEWITH = 'concaténer les textes';
+Blockly.LANG_TEXT_JOIN_TOOLTIP = "créer du texte en assemblant d'autres textes\n" +
+    'quel que soit leur nombre';
 
-Blockly.LANG_TEXT_CREATE_JOIN_TITLE_JOIN = 'join';
-Blockly.LANG_TEXT_CREATE_JOIN_TOOLTIP = 'Add, remove, or reorder sections to reconfigure this text block.';
+Blockly.LANG_TEXT_CREATE_JOIN_TITLE_JOIN = 'joindre';
+Blockly.LANG_TEXT_CREATE_JOIN_TOOLTIP = 'ajoute, enlève ou arrange les blocs de texte';
 
 Blockly.LANG_TEXT_CREATE_JOIN_ITEM_TITLE_ITEM = 'item';
-Blockly.LANG_TEXT_CREATE_JOIN_ITEM_TOOLTIP = 'Add an item to the text.';
+Blockly.LANG_TEXT_CREATE_JOIN_ITEM_TOOLTIP = 'rajoute une entrée de texte supplémentaire';
 
 Blockly.LANG_TEXT_APPEND_HELPURL = 'http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode91.html';
 Blockly.LANG_TEXT_APPEND_TO = 'to';
@@ -405,13 +405,13 @@ Blockly.LANG_VARIABLES_SET_TOOLTIP = "assigne la variable pour être égale à l
 
 // Procedures Blocks.
 Blockly.LANG_PROCEDURES_DEFNORETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
-Blockly.LANG_PROCEDURES_DEFNORETURN_PROCEDURE = 'fonction';
+Blockly.LANG_PROCEDURES_DEFNORETURN_PROCEDURE = 'procédure';
 Blockly.LANG_PROCEDURES_DEFNORETURN_DO = 'faire';
-Blockly.LANG_PROCEDURES_DEFNORETURN_TOOLTIP = 'une procedure ne retourne pas de valeur';
+Blockly.LANG_PROCEDURES_DEFNORETURN_TOOLTIP = 'une procédure ne retourne pas de valeur';
 
 Blockly.LANG_PROCEDURES_DEFRETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
-Blockly.LANG_PROCEDURES_DEFRETURN_PROCEDURE = Blockly.LANG_PROCEDURES_DEFNORETURN_PROCEDURE;
-Blockly.LANG_PROCEDURES_DEFRETURN_DO = Blockly.LANG_PROCEDURES_DEFNORETURN_DO;
+Blockly.LANG_PROCEDURES_DEFRETURN_PROCEDURE = 'fonction';
+Blockly.LANG_PROCEDURES_DEFRETURN_DO = 'faire';
 Blockly.LANG_PROCEDURES_DEFRETURN_RETURN = 'retourner';
 Blockly.LANG_PROCEDURES_DEFRETURN_TOOLTIP = 'une fonction renvoie un résultat';
 
