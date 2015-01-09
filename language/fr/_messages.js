@@ -29,25 +29,25 @@
  */
 
 // Context menus.
-Blockly.MSG_DUPLICATE_BLOCK = 'Dupliquer';
-Blockly.MSG_REMOVE_COMMENT = 'Enlever le commentaire';
-Blockly.MSG_ADD_COMMENT = 'Ajouter un commentaire';
-Blockly.MSG_EXTERNAL_INPUTS = 'Entrée externe';
-Blockly.MSG_INLINE_INPUTS = 'Entrée interne';
-Blockly.MSG_DELETE_BLOCK = 'Effacer ce bloc';
-Blockly.MSG_DELETE_X_BLOCKS = 'Effacer les %1 blocs';
-Blockly.MSG_COLLAPSE_BLOCK = 'Réduire les blocs';
-Blockly.MSG_EXPAND_BLOCK = 'Restaurer les blocs';
-Blockly.MSG_DISABLE_BLOCK = 'Désactiver le bloc';
-Blockly.MSG_ENABLE_BLOCK = 'Activer le bloc';
-Blockly.MSG_HELP = 'Aide';
+Blockly.MSG_DUPLICATE_BLOCK = 'dupliquer';
+Blockly.MSG_REMOVE_COMMENT = 'enlever le commentaire';
+Blockly.MSG_ADD_COMMENT = 'ajouter un commentaire';
+Blockly.MSG_EXTERNAL_INPUTS = 'entrée externe';
+Blockly.MSG_INLINE_INPUTS = 'entrée interne';
+Blockly.MSG_DELETE_BLOCK = 'effacer ce bloc';
+Blockly.MSG_DELETE_X_BLOCKS = 'effacer les %1 blocs';
+Blockly.MSG_COLLAPSE_BLOCK = 'réduire les blocs';
+Blockly.MSG_EXPAND_BLOCK = 'restaurer les blocs';
+Blockly.MSG_DISABLE_BLOCK = 'désactiver le bloc';
+Blockly.MSG_ENABLE_BLOCK = 'activer le bloc';
+Blockly.MSG_HELP = 'aide';
 
 // Variable renaming.
-Blockly.MSG_CHANGE_VALUE_TITLE = 'Changer la valeur :';
-Blockly.MSG_NEW_VARIABLE = 'Nouvelle variable...';
-Blockly.MSG_NEW_VARIABLE_TITLE = 'Nom de la nouvelle variable :';
-Blockly.MSG_RENAME_VARIABLE = 'Renommer la variable...';
-Blockly.MSG_RENAME_VARIABLE_TITLE = 'Renommer les "%1" variables en :';
+Blockly.MSG_CHANGE_VALUE_TITLE = 'changer la valeur :';
+Blockly.MSG_NEW_VARIABLE = 'nouvelle variable...';
+Blockly.MSG_NEW_VARIABLE_TITLE = 'nom de la nouvelle variable :';
+Blockly.MSG_RENAME_VARIABLE = 'renommer la variable...';
+Blockly.MSG_RENAME_VARIABLE_TITLE = 'renommer les "%1" variables en :';
 
 // Toolbox.
 Blockly.MSG_VARIABLE_CATEGORY = 'Variables';

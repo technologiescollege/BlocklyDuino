@@ -88,7 +88,7 @@ function load(event) {
  */
 function discard() {
   var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (count < 2 || window.confirm('Delete all ' + count + ' blocks?')) {
+  if (count < 2 || window.confirm('effacer tous les ' + count + ' blocs?')) {
     Blockly.mainWorkspace.clear();
     renderContent();
   }
