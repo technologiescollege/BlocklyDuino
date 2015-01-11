@@ -31,8 +31,7 @@ Blockly.Language.forwardbot = {
     this.setColour(230);
 	this.appendDummyInput("")
 	    .appendTitle("avance")
-	    .appendTitle(new Blockly.FieldImage("http://www.moumoute.biz/blockly/media/avance.gif", 64, 64));
-
+	    .appendTitle(new Blockly.FieldImage("../../media/avance.gif", 64, 64));
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -47,8 +46,7 @@ Blockly.Language.moveBackRight = {
     this.setColour(230);
 	this.appendDummyInput("")
 	    .appendTitle("recule vers la droite")
-	    .appendTitle(new Blockly.FieldImage("http://www.moumoute.biz/blockly/media/reculdroite.gif", 64, 64));
-
+	    .appendTitle(new Blockly.FieldImage("../../media/reculdroite.gif", 64, 64));
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -63,8 +61,7 @@ Blockly.Language.moveTurnLeft = {
     this.setColour(230);
 	this.appendDummyInput("")
 	    .appendTitle("avance vers la gauche")
-	    .appendTitle(new Blockly.FieldImage("http://www.moumoute.biz/blockly/media/avancegauche.gif", 64, 64));
-
+	    .appendTitle(new Blockly.FieldImage("../../media/avancegauche.gif", 64, 64));
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -79,8 +76,7 @@ Blockly.Language.blinkybot = {
     this.setColour(230);
 	this.appendDummyInput("")
 	    .appendTitle("clignote 5 fois")
-	    .appendTitle(new Blockly.FieldImage("http://www.moumoute.biz/blockly/media/blink.gif", 64, 64));
-
+	    .appendTitle(new Blockly.FieldImage("../../media/blink.gif", 64, 64));
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -95,9 +91,7 @@ Blockly.Language.scanbot = {
     this.setColour(230);
 	this.appendDummyInput("")
 	    .appendTitle("scanner")
-	    .appendTitle(new Blockly.FieldImage("http://www.moumoute.biz/blockly/media/insectbot.JPG", 64, 64));
-
-	
+	    .appendTitle(new Blockly.FieldImage("../../media/insectbot.JPG", 64, 64));
     this.setOutput(true, Number);
     this.setTooltip('demande au robot de scanner son environnement');
   }
@@ -114,7 +108,6 @@ Blockly.Language.temperature = {
 	    .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/3/36/Temp%26Humi.jpg/300px-Temp%26Humi.jpg", 64, 64))
 		.appendTitle("mesurée sur la broche")
 	    .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
-	
     this.setOutput(true, Number);
     this.setTooltip('capte la température');
   }
@@ -134,9 +127,7 @@ Blockly.Language.afficheur = {
 	    //.appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/3/36/Temp%26Humi.jpg/300px-Temp%26Humi.jpg", 64, 64));
 	this.appendValueInput("UNITS", String)
 	    .appendTitle("avec pour unité");
-	    //.appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/3/36/Temp%26Humi.jpg/300px-Temp%26Humi.jpg", 64, 64));
-
-	
+	    //.appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/3/36/Temp%26Humi.jpg/300px-Temp%26Humi.jpg", 64, 64));	
         this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.LANG_VARIABLES_SET_TOOLTIP_1);   

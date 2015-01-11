@@ -50,11 +50,11 @@ Blockly.MSG_RENAME_VARIABLE = 'renommer la variable...';
 Blockly.MSG_RENAME_VARIABLE_TITLE = 'renommer les "%1" variables en :';
 
 // Toolbox.
-Blockly.MSG_VARIABLE_CATEGORY = 'Variables';
-Blockly.MSG_PROCEDURE_CATEGORY = 'Fonctions - Procédures';
+Blockly.MSG_VARIABLE_CATEGORY = 'variables';
+Blockly.MSG_PROCEDURE_CATEGORY = 'fonctions & procédures';
 
 // Colour Blocks.
-Blockly.LANG_CATEGORY_COLOUR = 'Couleur';
+Blockly.LANG_CATEGORY_COLOUR = 'couleur';
 Blockly.LANG_COLOUR_PICKER_HELPURL = 'http://fr.wikipedia.org/wiki/Couleur';
 Blockly.LANG_COLOUR_PICKER_TOOLTIP = 'choisir une couleur dans la palette.';
 
@@ -73,7 +73,7 @@ Blockly.LANG_COLOUR_BLEND_RATIO = 'ratio';
 Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'mélange deux cuoleurs ensemble avec un ratio (0,0 - 1,0)';
 
 // Control Blocks.
-Blockly.LANG_CATEGORY_CONTROLS = 'Contrôle';
+Blockly.LANG_CATEGORY_CONTROLS = 'contrôle';
 Blockly.LANG_CONTROLS_IF_HELPURL = 'http://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_1 = 'SI la valeur est VRAI, ALORS execute les instructions.';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_2 = 'SI la valeur est VRAI, ALORS execute la premiere instruction du bloc.\n' +
@@ -142,7 +142,7 @@ Blockly.LANG_CONTROLS_FLOW_STATEMENTS_WARNING = 'Warning:\n' +
     'be used within a loop.';
 
 // Logic Blocks.
-Blockly.LANG_CATEGORY_LOGIC = 'Logique';
+Blockly.LANG_CATEGORY_LOGIC = 'logique';
 Blockly.LANG_LOGIC_COMPARE_HELPURL = 'http://en.wikipedia.org/wiki/Inequality_(mathematics)';
 Blockly.LANG_LOGIC_COMPARE_TOOLTIP_EQ = 'Return true if both inputs equal each other.';
 Blockly.LANG_LOGIC_COMPARE_TOOLTIP_NEQ = 'Return true if both inputs are not equal to each other.';
@@ -176,7 +176,7 @@ Blockly.LANG_LOGIC_NULL = 'vide';
 Blockly.LANG_LOGIC_NULL_TOOLTIP = 'renvoie rien';
 
 // Math Blocks.
-Blockly.LANG_CATEGORY_MATH = 'Maths';
+Blockly.LANG_CATEGORY_MATH = 'maths';
 Blockly.LANG_MATH_NUMBER_HELPURL = 'http://en.wikipedia.org/wiki/Number';
 Blockly.LANG_MATH_NUMBER_TOOLTIP = 'un nombre';
 
@@ -260,7 +260,7 @@ Blockly.LANG_MATH_RANDOM_FLOAT_TOOLTIP = 'Return a random fraction between\n' +
     '0.0 (inclusive) and 1.0 (exclusive).';
 
 // Text Blocks.
-Blockly.LANG_CATEGORY_TEXT = 'Texte';
+Blockly.LANG_CATEGORY_TEXT = 'texte';
 Blockly.LANG_TEXT_TEXT_HELPURL = 'http://en.wikipedia.org/wiki/String_(computer_science)';
 Blockly.LANG_TEXT_TEXT_TOOLTIP = 'une lettre, un mot, ou une ligne de texte';
 
@@ -341,7 +341,7 @@ Blockly.LANG_TEXT_PROMPT_TYPE_TEXT = 'text';
 Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER = 'number';
 
 // Lists Blocks.
-Blockly.LANG_CATEGORY_LISTS = 'Listes';
+Blockly.LANG_CATEGORY_LISTS = 'listes';
 Blockly.LANG_LISTS_CREATE_EMPTY_HELPURL = 'http://en.wikipedia.org/wiki/Linked_list#Empty_lists';
 Blockly.LANG_LISTS_CREATE_EMPTY_TITLE = 'create empty list';
 Blockly.LANG_LISTS_CREATE_EMPTY_TOOLTIP = 'Returns a list, of length 0, containing no data records';
