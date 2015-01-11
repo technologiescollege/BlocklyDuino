@@ -2,7 +2,6 @@
 <html manifest=node.manifest>
 <head>
   <link rel="icon" type="image/png" href="favicon.bmp" />
-<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.bmp" /><![endif]-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Blockly pour Arduino</title>
   <!--script type="text/javascript" src="../blockly_compressed.js"></script-->
@@ -365,29 +364,22 @@ function init(blockly) {
       <td>
         <table>
           <tr id="tabRow" height="1em">
-            <td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">Blocs</td>
+            <td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">blocs</td>
             <td class="tabmin">&nbsp;</td>
-            <!--td id="tab_javascript" class="taboff" onclick="tabClick(this.id)">JavaScript</td>
-            <td class="tabmin">&nbsp;</td-->
-            <!--td id="tab_dart" class="taboff" onclick="tabClick(this.id)">Dart</td>
-            <td class="tabmin">&nbsp;</td>
-            <td id="tab_python" class="taboff" onclick="tabClick(this.id)">Python</td>
-            <td class="tabmin">&nbsp;</td-->
-            <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">Code_Arduino</td>
+            <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">code_Arduino</td>
             <td class="tabmin">&nbsp;</td>            
-            <td id="tab_term" class="taboff" onclick="tabClick(this.id)">Console_Série</td>
+            <td id="tab_term" class="taboff" onclick="tabClick(this.id)">console_série</td>
 			<td class="tabmin">&nbsp;</td>    
-            <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">XML</td>
+            <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">traduction_XML</td>
 			<td class="tabmin">&nbsp;</td>    
             <td class="tabmax">
               
-              <button onclick="shield()");">Matériels</button>
-			  <button onclick="discard()">Annuler</button>
-              <button onclick="save()">Sauver en XML</button>
-              <button id="fakeload">Charger un fichier XML</button>
-			  <button onclick="lang()">Langues</button>
+              <button onclick="shield()");">matériels</button>
+			  <button onclick="discard()">annuler</button>
+              <button onclick="save()">sauver en fichier XML</button>
+              <button id="fakeload">charger un fichier XML</button>
+			  <button onclick="lang()">langues</button>
               <input type="file" id="load" style="display: none;"/>
-              <!--button class="launch" onclick="runJS()">Run Program</button-->
             </td>
           </tr>
         </table>
@@ -397,13 +389,10 @@ function init(blockly) {
     <tr>
       <td height="99%">
         <iframe id="content_blocks" src="frame.html"></iframe>
-		<!--div id="content_blocks" style="height:auto !important;height:400px; min-height:400px;"></div-->
-        <!--pre id="content_javascript"></pre>
-        <pre id="content_dart"></pre-->
         <div id="content_arduino">          
           <select id="cb_cf_boards"></select><select id="cb_cf_ports"></select>
-              <button id="cb_cf_verify_btn" class="btn btn-success">Vérifier le code</button>
-              <button id="cb_cf_flash_btn" class="btn btn-success">Téléverser dans l'Arduino ! </button>           
+              <button id="cb_cf_verify_btn" class="btn btn-success">vérifier le code</button>
+              <button id="cb_cf_flash_btn" class="btn btn-success">téléverser dans l'Arduino ! </button>           
               <textarea id="textarea_arduino"></textarea>
               <p id="cb_cf_operation_output"></p>
               <div id="debug_arduino"></div>
@@ -414,7 +403,7 @@ function init(blockly) {
         </div>
         <div id="content_term">
           <select id="cb_cf_baud_rates"></select>
-          <button id="cb_cf_serial_monitor_connect">Ouvrir la console Série</button>
+          <button id="cb_cf_serial_monitor_connect">ouvrir la console série</button>
           <div id="cb_cf_serial_monitor"></div>  
         </div>
       </td>

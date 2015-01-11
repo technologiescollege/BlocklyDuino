@@ -29,7 +29,7 @@
 if (!Blockly.Language) Blockly.Language = {};
 
 Blockly.Language.base_delay = {
-  category: 'Contrôle',
+  category: 'contrôle',
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {
     this.setColour(120);
@@ -44,7 +44,7 @@ Blockly.Language.base_delay = {
 };
 
 Blockly.Language.base_map = {
-  category: 'Maths',
+  category: 'maths',
   helpUrl: 'http://arduino.cc/en/Reference/map',
   init: function() {
     this.setColour(230);
@@ -63,7 +63,7 @@ Blockly.Language.base_map = {
 };
 
 Blockly.Language.inout_buildin_led = {
-   category: 'Sorties',
+   category: 'sorties',
    helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
    init: function() {
      this.setColour(230);
@@ -77,7 +77,7 @@ Blockly.Language.inout_buildin_led = {
 };
 
 Blockly.Language.inout_digital_write = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
   init: function() {
     this.setColour(230);
@@ -93,7 +93,7 @@ Blockly.Language.inout_digital_write = {
 };
 
 Blockly.Language.inout_digital_read = {
-  category: 'Entrées',
+  category: 'entrées',
   helpUrl: 'http://arduino.cc/en/Reference/DigitalRead',
   init: function() {
     this.setColour(230);
@@ -106,7 +106,7 @@ Blockly.Language.inout_digital_read = {
 };
 
 Blockly.Language.inout_PWM_write = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -124,7 +124,7 @@ Blockly.Language.inout_PWM_write = {
 };
 
 Blockly.Language.inout_analog_write = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -142,7 +142,7 @@ Blockly.Language.inout_analog_write = {
 };
 
 Blockly.Language.inout_analog_read = {
-  category: 'Entrées',
+  category: 'entrées',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
   init: function() {
     this.setColour(230);
@@ -155,7 +155,7 @@ Blockly.Language.inout_analog_read = {
 };
 
 Blockly.Language.tone = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -176,7 +176,7 @@ Blockly.Language.tone = {
 };
 
 Blockly.Language.notone = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(230);
@@ -192,7 +192,7 @@ Blockly.Language.notone = {
 
 
 Blockly.Language.inout_analog_read = {
-  category: 'Entrées',
+  category: 'entrées',
   helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
   init: function() {
     this.setColour(230);
@@ -205,7 +205,7 @@ Blockly.Language.inout_analog_read = {
 };
 
 Blockly.Language.inout_highlow = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/Constants',
   init: function() {
     this.setColour(230);
@@ -217,7 +217,7 @@ Blockly.Language.inout_highlow = {
 };
 
 Blockly.Language.inout_onoff = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://arduino.cc/en/Reference/Constants',
   init: function() {
     this.setColour(230);
@@ -231,7 +231,7 @@ Blockly.Language.inout_onoff = {
 //servo block
 //http://www.seeedstudio.com/depot/emax-9g-es08a-high-sensitive-mini-servo-p-760.html?cPath=170_171
 Blockly.Language.servo_move = {
-  category: 'Servo-moteur',
+  category: 'servo-moteur',
   helpUrl: 'http://www.arduino.cc/playground/ComponentLib/servo',
   init: function() {
     this.setColour(190);
@@ -255,7 +255,7 @@ Blockly.Language.servo_move = {
 };
 
 Blockly.Language.servo_read_degrees = {
-  category: 'Servo-moteur',
+  category: 'servo-moteur',
   helpUrl: 'http://www.arduino.cc/playground/ComponentLib/servo',
   init: function() {
     this.setColour(190);
@@ -270,7 +270,7 @@ Blockly.Language.servo_read_degrees = {
 };
 
 Blockly.Language.serial_print = {
-  category: 'Sorties',
+  category: 'sorties',
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
     this.setColour(230);
@@ -373,9 +373,9 @@ Blockly.Arduino.inout_onoff = function() {
 
 /*
 //servo
-#include <Servo.h>
+#include <servo.h>
 
-Servo servo_11;
+servo servo_11;
 
 void setup() { 
   servo_11.attach(11);
@@ -396,8 +396,8 @@ Blockly.Arduino.servo_move = function() {
   var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC) || '1000'
   //delay_time = delay_time.replace('(','').replace(')','');
   
-  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
-  Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
+  Blockly.Arduino.definitions_['define_servo'] = '#include <servo.h>\n';
+  Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'servo servo_'+dropdown_pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
   
   var code = 'servo_'+dropdown_pin+'.write('+value_degree+');\n'+'delay(' + delay_time + ');\n';
@@ -407,8 +407,8 @@ Blockly.Arduino.servo_move = function() {
 Blockly.Arduino.servo_read_degrees = function() {
   var dropdown_pin = this.getTitleValue('PIN');
   
-  Blockly.Arduino.definitions_['define_servo'] = '#include &lt;Servo.h&gt;\n';
-  Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
+  Blockly.Arduino.definitions_['define_servo'] = '#include &lt;servo.h&gt;\n';
+  Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'servo servo_'+dropdown_pin+';\n';
   Blockly.Arduino.setups_['setup_servo_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
   
   var code = 'servo_'+dropdown_pin+'.read()';
