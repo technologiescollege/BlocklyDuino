@@ -52,9 +52,10 @@ Blockly.MSG_RENAME_VARIABLE_TITLE = 'renommer les "%1" variables en :';
 // Toolbox.
 Blockly.MSG_VARIABLE_CATEGORY = 'variables';
 Blockly.MSG_PROCEDURE_CATEGORY = 'fonctions & procédures';
+Blockly.LANG_CATEGORY_COLOUR = 'couleur';
+Blockly.LANG_CATEGORY_CONTROLS = 'contrôle';
 
 // Colour Blocks.
-Blockly.LANG_CATEGORY_COLOUR = 'couleur';
 Blockly.LANG_COLOUR_PICKER_HELPURL = 'http://fr.wikipedia.org/wiki/Couleur';
 Blockly.LANG_COLOUR_PICKER_TOOLTIP = 'choisir une couleur dans la palette.';
 
@@ -73,7 +74,6 @@ Blockly.LANG_COLOUR_BLEND_RATIO = 'ratio';
 Blockly.LANG_COLOUR_BLEND_TOOLTIP = 'mélange deux cuoleurs ensemble avec un ratio (0,0 - 1,0)';
 
 // Control Blocks.
-Blockly.LANG_CATEGORY_CONTROLS = 'contrôle';
 Blockly.LANG_CONTROLS_IF_HELPURL = 'http://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_1 = 'SI la valeur est VRAI, ALORS execute les instructions.';
 Blockly.LANG_CONTROLS_IF_TOOLTIP_2 = 'SI la valeur est VRAI, ALORS execute la premiere instruction du bloc.\n' +
