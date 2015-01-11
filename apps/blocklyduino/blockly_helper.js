@@ -1,17 +1,4 @@
 /**
- * Execute the user's code.
- * Just a quick and dirty eval.  No checks for infinite loops, etc.
- */
-function runJS() {
-  var code = Blockly.Generator.workspaceToCode('JavaScript');
-  try {
-    eval(code);
-  } catch (e) {
-    alert('Program error:\n' + e);
-  }
-}
-
-/**
  * Backup code blocks to localStorage.
  */
 function backup_blocks() {
@@ -67,11 +54,11 @@ function load(event) {
       try {
         var xml = Blockly.Xml.textToDom(target.result);
       } catch (e) {
-        alert('Error parsing XML:\n' + e);
+        alert('erreur dans le fichier XML:\n' + e);
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm('voulez-vous remplacer les blocs actuels ?\n"Annuler" lesfera fusionner.')) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
@@ -88,7 +75,7 @@ function load(event) {
  */
 function discard() {
   var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (count < 2 || window.confirm('effacer tous les ' + count + ' blocs?')) {
+  if (count < 2 || window.confirm('effacer tous les ' + count + ' blocs ?')) {
     Blockly.mainWorkspace.clear();
     renderContent();
   }
@@ -159,12 +146,12 @@ function onSuccess () {
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm('voulez-vous remplacer tous les blocs actuels ?\n"Annuler" les fera fusionner.')) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
     } else {
-      alert("Server error");
+      alert("Erreur");
     }
   }
 }
@@ -172,7 +159,7 @@ function onSuccess () {
 function load_by_url(uri) {
   ajax = createAJAX();
   if (!ajax) {
-　　   alert ('Not compatible with XMLHttpRequest');
+　　   alert ('Incompatible avec XMLHttpRequest');
 　　   return 0;
 　  }
   if (ajax.overrideMimeType) {
