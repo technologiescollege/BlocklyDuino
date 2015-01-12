@@ -138,7 +138,6 @@ function init(blockly) {
             (Blockly.Toolbox.width - 38) + 'px';
             // Account for the 19 pixel margin and on each side.
       }, 1);
-	Blockly.initLanguage();
 
   // Fixes viewport for small screens.
   var viewport = document.querySelector('meta[name="viewport"]');
@@ -146,12 +145,6 @@ function init(blockly) {
     viewport.setAttribute('content',
         'width=725, initial-scale=.35, user-scalable=no');
   }
-
-  Blockly.inject(document.getElementById('blockly'),
-      {media: '../../media/',
-       rtl: Blockly.isRtl(),
-       toolbox: document.getElementById('toolbox')});
-
 
   }
 
