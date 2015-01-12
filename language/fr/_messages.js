@@ -52,6 +52,10 @@ Blockly.MSG_RENAME_VARIABLE_TITLE = 'renommer les "%1" variables en :';
 // Toolbox.
 Blockly.MSG_VARIABLE_CATEGORY = 'variables';
 Blockly.MSG_PROCEDURE_CATEGORY = 'fonctions & procédures';
+Blockly.MSG_CATEGORY_COLOUR = 'couleur';
+Blockly.MSG_CATEGORY_CONTROLS = 'contrôle';
+Blockly.LANG_CATEGORY_VARIABLE = 'variables';
+Blockly.LANG_CATEGORY_PROCEDURE = 'fonctions & procédures';
 Blockly.LANG_CATEGORY_COLOUR = 'couleur';
 Blockly.LANG_CATEGORY_CONTROLS = 'contrôle';
 
