@@ -50,12 +50,7 @@ Blockly.Arduino.custom_write = function() {
 };
 
 Blockly.Arduino.custom_read = function() {
-  var dropdown_pin = this.getTitleValue('PIN');
-  
-  // Blockly.Arduino.definitions_['define_custom_read'] = '#include &lt;Servo.h&gt;\n';
-  // Blockly.Arduino.definitions_['var_custom_read'+dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
-  // Blockly.Arduino.setups_['setup_custom_read_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
-  
+  var dropdown_pin = this.getTitleValue('PIN');  
   var code = 'analogRead('+dropdown_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
