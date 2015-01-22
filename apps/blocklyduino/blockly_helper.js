@@ -1,6 +1,20 @@
 /**
  * Backup code blocks to localStorage.
  */
+ 
+ function shield(){                                                                                     // modified Technozone51
+  var Cacheobj=document.getElementById("pinout");
+  var count = Blockly.mainWorkspace.getAllBlocks().length;
+  if (myFrame.profile["default"]!=myFrame.profile[Cacheobj.options[Cacheobj.selectedIndex].value]) {
+  if (false || window.confirm('Supprime tout et sélectionne la carte ('+myFrame.profile[Cacheobj.options[Cacheobj.selectedIndex].value].description+') ?')) {
+    myFrame.profile["default"]=myFrame.profile[Cacheobj.options[Cacheobj.selectedIndex].value];
+    document.getElementById("cardpicture").innerHTML = '<img src="'+Cacheobj.options[Cacheobj.selectedIndex].value+'.png" border="0" align="left" height=50/>';
+    Blockly.mainWorkspace.clear();
+    renderContent();
+  }                                                                                                     // modified Technozone51
+  }
+}  
+
 function backup_blocks() {
   if ('localStorage' in window) {
     var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
