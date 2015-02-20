@@ -369,7 +369,12 @@ function init(blockly) {
     <tr>
       <td>
         <table>
-          <tr id="tabRow" height="1em">
+          <tr>
+			<td>
+			<form name="pinoutform"><Select id="pinout" size="1" onclick="shield()"><Option value="arduino">Arduino UNO</Option><Option value="arduino_mega">Arduino MEGA</Option></Select></form>
+			</td>
+		  <td>
+		  <tr id="tabRow" height="1em">
             <td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">blocs</td>
             <td class="tabmin">&nbsp;</td>
             <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">code_Arduino</td>
@@ -380,13 +385,11 @@ function init(blockly) {
 			<td class="tabmin">&nbsp;</td>    
             <td class="tabmax">
               <TABLE CELLPADDING=10 CELLSPACING=20>
-               <TR>	<TD>
-              <form name="pinoutform"><Select id="pinout" size="1" onclick="shield()"><Option value="arduino">Arduino UNO</Option><Option value="arduino_mega">Arduino MEGA</Option></Select></form>
-                </TD><TD>
-              <button onclick="discard()">Annuler</button>
-              <button onclick="save()">Sauver en XML</button>
-              <button id="fakeload">Charger un fichier XML</button>
-	      		  <button onclick="lang()">Langues</button>
+               <TR><TD>
+              <button onclick="discard()">annuler</button>
+              <button onclick="save()">sauver en fichier XML</button>
+              <button id="fakeload">charger un fichier XML</button>
+			  <button onclick="lang()">langues</button>
                </TD></TR></TABLE>
               <input type="file" id="load" style="display: none;"/>
             </td>

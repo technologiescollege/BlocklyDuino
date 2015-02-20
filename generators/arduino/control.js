@@ -55,7 +55,7 @@ Blockly.Arduino.controls_repeat = function() {
   }
   var loopVar = Blockly.Arduino.variableDB_.getDistinctName(
       'count', Blockly.Variables.NAME_TYPE);
-  var code = 'for (' + loopVar + ' = 0; ' +
+  var code = 'for (int ' + loopVar + ' = 0; ' +
       loopVar + ' < ' + repeats + '; ' +
       loopVar + '++) {\n' +
       branch + '}\n';
