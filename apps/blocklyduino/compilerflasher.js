@@ -1192,12 +1192,12 @@ compilerflasher = function(lf){
             try{
                 var obj = jQuery.parseJSON(data);
                 if (obj.success == 0) {
-                    cb.setOperationOutput("Verification failed.");
+                    cb.setOperationOutput("vérification impossible !");
                     cb.eventManager.fire('hex_failed', obj.message);
                 }
                 else
                 {
-                    cb.setOperationOutput("Verification Successful!")
+                    cb.setOperationOutput("vérification terminée avec succès !")
                     cb.eventManager.fire('hex_succeed', obj);
                 }
 
@@ -1221,7 +1221,7 @@ compilerflasher = function(lf){
         {
             var cb = this;
             this.eventManager.fire('pre_flash');
-            this.setOperationOutput("<i class='icon-spinner icon-spin'> </i> Working...");
+            this.setOperationOutput("<i class='icon-spinner icon-spin'> </i> travail en cours...");
             this.getbin(function(obj){
                 if (obj.success == 0) {
                     cb.setOperationOutput("There was an error compiling.")
@@ -1270,7 +1270,7 @@ compilerflasher = function(lf){
         {
             var cb = this;
             this.eventManager.fire('pre_flash');
-            this.setOperationOutput("<i class='icon-spinner icon-spin'> </i> Working...");
+            this.setOperationOutput("<i class='icon-spinner icon-spin'> </i> travail en cours...");
             this.getbin(function(obj){
                 if (obj.success == 0) {
                     cb.setOperationOutput("There was an error compiling.")
@@ -1327,16 +1327,16 @@ compilerflasher = function(lf){
         $.get(url);
 
         this.eventManager.fire('pre_verify');
-        this.setOperationOutput("<i class='icon-spinner icon-spin'> </i> Working...");
+        this.setOperationOutput("<i class='icon-spinner icon-spin'> </i> travail en cours...");
         var cb = this;
         this.getbin(function(obj){
             if (obj.success == 0) {
-                cb.setOperationOutput("Verification failed.");
+                cb.setOperationOutput("vérification impossible !");
                 cb.eventManager.fire('verification_failed', obj.message);
             }
             else
             {
-                cb.setOperationOutput("Verification Successful");
+                cb.setOperationOutput("vérification terminée avec succès");
                 cb.eventManager.fire('verification_succeed', obj.size);
             }
         });
@@ -1355,7 +1355,7 @@ compilerflasher = function(lf){
                 "bootloader_file" : ((typeof this.selectedBoard['bootloader']['file']) === "undefined") ? "undefined" : this.selectedBoard['bootloader']['file'] }) );
             $.get(url);
 
-            this.setOperationOutput("<i class='icon-spinner icon-spin'></i> Working...")
+            this.setOperationOutput("<i class='icon-spinner icon-spin'></i> travail en cours...")
             if (typeof this.selectedBoard['bootloader']['file'] === "undefined")
             {
                 document.getElementById('plugin0').saveToHex("");
@@ -1377,7 +1377,7 @@ compilerflasher = function(lf){
         }
         else
         {
-            this.setOperationOutput("Please select a valid port!")
+            this.setOperationOutput("veuillez choisir un port COM valide !")
         }
 
     }
