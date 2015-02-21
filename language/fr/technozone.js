@@ -264,7 +264,7 @@ Blockly.Language.technozone_mot1easycon1 = {
     this.appendDummyInput("")
         .appendTitle("commande le")
         .appendTitle(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
-        .appendTitle("sur la carte EASYBOT1")
+        .appendTitle("sur la carte EASYCON1")
         .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/plugins/easycon1.jpg", 64, 64))
         .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/plugins/plus.jpg", 20, 64))
         .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/plugins/kitmot1.jpg", 64, 64));

@@ -239,7 +239,7 @@ Blockly.Language.servo_move = {
         .appendTitle("faire tourner le servo-moteur")
         .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
         .appendTitle("sur la broche")
-        .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+        .appendTitle(new Blockly.FieldDropdown(profile.default.PWM), "PIN")
     this.appendValueInput("DEGREE", Number)
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)

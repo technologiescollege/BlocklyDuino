@@ -371,22 +371,23 @@ function init(blockly) {
         <table>
           <tr>
 			<td>
-			<form name="pinoutform"><Select id="pinout" size="1" onclick="shield()"><Option value="arduino">Arduino UNO</Option><Option value="arduino_mega">Arduino MEGA</Option></Select></form>
+			<form name="pinoutform"><Select id="pinout" size="1" onclick="arduino_card()"><Option value="arduino">Arduino UNO</Option><Option value="arduino_mega">Arduino MEGA</Option></Select></form>
 			</td>
 		  <td>
 		  <tr id="tabRow" height="1em">
             <td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">blocs</td>
             <td class="tabmin">&nbsp;</td>
-            <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">code_Arduino</td>
+            <td id="tab_arduino" class="taboff" onclick="tabClick(this.id)">code Arduino</td>
             <td class="tabmin">&nbsp;</td>            
-            <td id="tab_term" class="taboff" onclick="tabClick(this.id)">console_série</td>
+            <td id="tab_term" class="taboff" onclick="tabClick(this.id)">console série</td>
 			<td class="tabmin">&nbsp;</td>    
-            <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">traduction_XML</td>
+            <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">traduction XML</td>
 			<td class="tabmin">&nbsp;</td>    
-            <td class="tabmax">
+            <td class="tabmin">
               <TABLE CELLPADDING=10 CELLSPACING=20>
                <TR><TD>
-              <button onclick="discard()">annuler</button>
+              <button onclick="shield()">matériels connectés</button>
+			  <button onclick="discard()">réinitialiser</button>
               <button onclick="save()">sauver en fichier XML</button>
               <button id="fakeload">charger un fichier XML</button>
 			  <button onclick="lang()">langues</button>
@@ -422,7 +423,7 @@ function init(blockly) {
     </tr>
 	<tr>
 		<td>
-			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions et adaptations Sébastien Canet, sur la reprise intégrale du code amélioré par Julien Rat</i>
+			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions et adaptations Sébastien Canet, sur la reprise du code amélioré par Julien Rat</i>
 		</td>
 	</tr>
   </table>
