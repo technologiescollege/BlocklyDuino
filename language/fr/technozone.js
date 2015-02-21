@@ -256,6 +256,30 @@ Blockly.Language.technozone_mot1easybot1 = {
   }
 };
 
+Blockly.Language.technozone_mot1easycon1 = {
+  category: 'TechnoZone51 : moteur Courant Continu',
+  helpUrl: 'http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:easybot1',
+  init: function() {
+    this.setColour(190);
+    this.appendDummyInput("")
+        .appendTitle("commande le")
+        .appendTitle(new Blockly.FieldDropdown([["moteur A", "HIGH"], ["moteur B", "LOW"]]), "MOT")
+        .appendTitle("sur la carte EASYBOT1")
+        .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/plugins/easycon1.jpg", 64, 64))
+        .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/plugins/plus.jpg", 20, 64))
+        .appendTitle(new Blockly.FieldImage("http://www.technozone51.fr/plugins/kitmot1.jpg", 64, 64));
+    this.appendValueInput("SENS", Boolean)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendTitle("sens horaire (VRAI ou FAUX ?)");
+    this.appendValueInput("VITESSE", Number)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendTitle("vitesse [0~255]");          
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Commande de deux moteurs CC sur EASYCON1 (réf : EASYCON1 + KIT-MOT1)');
+  }
+};
+
 Blockly.Language.technozone_lcdinit = {
   category: 'TechnoZone51 : écran LCD',
   helpUrl: 'http://www.techno-zone-51.fr/dokuwiki2/doku.php?id=documentation:lcd1',
@@ -1032,6 +1056,35 @@ Blockly.Arduino.technozone_mot1easybot1 = function() {
    //moteur B
    dropdown_pindir=13;
    dropdown_pinpwm=6;
+  }
+  var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
+  var value_vitesse = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.setups_["setup_mot1_"+dropdown_pindir] = "pinMode("+dropdown_pindir+",OUTPUT);//MOT2 DIR pin\n"+
+  "  pinMode("+dropdown_pinpwm+",OUTPUT);//MOT2 PWM pin\n";
+  var code = "";
+  Blockly.Arduino.definitions_['define_cmd_mot'] = "void cmd_mot(byte dirpin,byte pwmpin,boolean sens,byte vitesse)\n"+
+    "{\n"+
+    "  digitalWrite(dirpin,sens);\n"+
+    "  analogWrite(pwmpin,vitesse);\n"+
+    "}\n";
+  code="cmd_mot("+dropdown_pindir+","+dropdown_pinpwm+","+value_sens+","+value_vitesse+");\n";
+  //return [code, Blockly.Arduino.ORDER_ATOMIC];
+  return code;
+};
+
+
+Blockly.Arduino.technozone_mot1easycon1 = function() {
+  var dropdown_mot = this.getTitleValue('MOT');
+  var dropdown_pindir; 
+  var dropdown_pinpwm;
+  if (dropdown_mot==="HIGH") {
+   //moteur A
+   dropdown_pindir=52;
+   dropdown_pinpwm=13;
+  } else {
+   //moteur B
+   dropdown_pindir=53;
+   dropdown_pinpwm=12;
   }
   var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
   var value_vitesse = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
