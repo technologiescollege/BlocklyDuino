@@ -152,6 +152,43 @@ function init(blockly) {
     load_by_url(dest);
   }
 }
+
+/**
+ * Sauvegadre du code Arduino, affiché dans textarea_arduino
+ * 
+ * via un bouton
+ */
+function saveArduino() {
+  	var data = document.getElementById('textarea_arduino').value;
+	var blob = new Blob([data], {type: 'text'});
+	saveAs(blob, 'code_arduino.ino');
+}
+
+/**
+ * Sauvegadre du code Arduino, affiché dans textarea_arduino
+ * 
+ * via un href
+ */
+$(document).ready(function () {
+	function saveArduino(filename) {
+	  var data = document.getElementById('textarea_arduino').value;
+	
+	  uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
+	
+	  $(this)
+	            .attr({
+	            'download': filename,
+	                'href': uri,
+	                'target': '_blank'
+	        });
+	}
+	
+	$("#exportArduino").click(function (event) {
+		var outputFile = 'code_arduino.ino'
+		saveArduino.apply(this, [outputFile]);
+	}); 
+});
+
   </script>
   <style>
     body {
@@ -371,7 +408,12 @@ function init(blockly) {
         <table>
           <tr>
 			<td>
-			<form name="pinoutform"><Select id="pinout" size="1" onclick="arduino_card()"><Option value="arduino">Arduino UNO</Option><Option value="arduino_mega">Arduino MEGA</Option></Select></form>
+				<form name="pinoutform">
+					<Select id="pinout" size="1" onclick="arduino_card()">
+						<Option value="arduino">Arduino UNO</Option>
+						<Option value="arduino_mega">Arduino MEGA</Option>
+					</Select>
+				</form>
 			</td>
 		  <td>
 		  <tr id="tabRow" height="1em">
@@ -406,6 +448,8 @@ function init(blockly) {
           <select id="cb_cf_boards"></select><select id="cb_cf_ports"></select>
               <button id="cb_cf_verify_btn" class="btn btn-success">vérifier le code</button>
               <button id="cb_cf_flash_btn" class="btn btn-success">téléverser dans l'Arduino ! </button>           
+              <button id="btn_ino" class="btn btn-success" onclick="saveArduino()">sauvegarder en fichier INO</button>
+			  <a class='btn btn-success' href="#" id ="exportArduino" role='button'>Sauvegarde en fichier INO</a>
               <textarea id="textarea_arduino"></textarea>
               <p id="cb_cf_operation_output"></p>
               <div id="debug_arduino"></div>
@@ -423,7 +467,7 @@ function init(blockly) {
     </tr>
 	<tr>
 		<td>
-			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions et adaptations Sébastien Canet, sur la reprise du code amélioré par Julien Rat</i>
+			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions et adaptations Sébastien Canet, sur la reprise du code amélioré par Julien Rat, boosté par Olivier Métayer</i>
 		</td>
 	</tr>
   </table>
