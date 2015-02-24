@@ -644,7 +644,7 @@ compilerflasher = function(lf){
         this.scan = function() {
 
                         window.hasPerm = document.getElementById('plugin0').setCallback(function (from, output) {
-                if (output == "Déconnecter") {
+                if (output == "déconnecter la console") {
 
                     compilerflasher.pluginHandler.disconnect(true);
                 } else
@@ -694,7 +694,7 @@ compilerflasher = function(lf){
                     $("#serial_monitor_content").show(1000);
                     this.connected = true;
                     var pl = this;
-                    $("#cb_cf_serial_monitor_connect").html("Déconnecter").unbind('click').click(function(){pl.disconnect()});
+                    $("#cb_cf_serial_monitor_connect").html("déconnecter la console").unbind('click').click(function(){pl.disconnect()});
                     $("#serial_hud").html("");
 
                     var pl = this;
@@ -783,7 +783,7 @@ compilerflasher = function(lf){
 		            clearInterval(window.portValidatorInterval);
 
                 var pl = this;
-                $("#cb_cf_serial_monitor_connect").html("<i class='icon-list-alt'></i> Ouvrir la Console Série").unbind('click').click(function(){pl.connect()});
+                $("#cb_cf_serial_monitor_connect").html("<i class='icon-list-alt'></i> connecter la console").unbind('click').click(function(){pl.connect()});
                 this.connected = false;
 
                 $("#cb_cf_serial_monitor_connect").attr('disabled', 'disabled');

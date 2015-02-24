@@ -155,16 +155,14 @@ function init(blockly) {
 }
 
 /**
- * Sauvegadre du code Arduino, affiché dans textarea_arduino
+ * Sauvegardes du code Arduino, affiché dans textarea_arduino
  * 
  * via un href
  */
 $(document).ready(function () {
 	function saveArduino(filename) {
 	  var data = document.getElementById('textarea_arduino').value;
-	
 	  uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
-	
 	  $(this)
 	            .attr({
 	            'download': filename,
@@ -172,10 +170,26 @@ $(document).ready(function () {
 	                'target': '_blank'
 	        });
 	}
-	
 	$("#exportArduino").click(function (event) {
 		var outputFile = 'code_arduino.ino'
 		saveArduino.apply(this, [outputFile]);
+	}); 
+});
+
+$(document).ready(function () {
+	function saveXML(filename) {
+	  var data = document.getElementById('textarea_xml').value;
+	  uri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
+	  $(this)
+	            .attr({
+	            'download': filename,
+	                'href': uri,
+	                'target': '_blank'
+	        });
+	}
+	$("#exportXML").click(function (event) {
+		var outputFile = 'blocky.xml'
+		saveXML.apply(this, [outputFile]);
 	}); 
 });
 
@@ -413,7 +427,7 @@ $(document).ready(function () {
           <tr>
             <td style="vertical-align: middle; text-align: right;" colspan="3" rowspan="1">
             <button class="btn btn-danger" onclick="discard()">réinitialiser</button>
-            <button class="btn btn-success" onclick="save()">sauver en fichier XML</button>
+            <a id ="exportXML" class='btn btn-success' href="#" role='button'>sauver en fichier XML</a>
             <button id="fakeload" class="btn btn-success">charger un fichier XML</button>
             </td>
             <td></td>
@@ -460,7 +474,7 @@ $(document).ready(function () {
         </div>
         <div id="content_term">
           <select id="cb_cf_baud_rates"></select>
-          <button id="cb_cf_serial_monitor_connect" class="btn btn-primary">ouvrir la console série</button>
+          <button id="cb_cf_serial_monitor_connect" class="btn btn-primary">connecter la console série</button>
           <div id="cb_cf_serial_monitor"></div>  
         </div>
       </td>
