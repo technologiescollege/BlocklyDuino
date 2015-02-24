@@ -13,6 +13,7 @@
   <script src="../jquery.min.js"></script>
   <script src="compilerflasher.js" type="text/javascript"></script>
   <script src="../bootstrap.min.js"></script>
+  <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
   <script>
   
 var TABS_ = ['blocks', 'arduino', 'term' , 'xml' ];
@@ -151,17 +152,6 @@ function init(blockly) {
   if(dest){
     load_by_url(dest);
   }
-}
-
-/**
- * Sauvegadre du code Arduino, affiché dans textarea_arduino
- * 
- * via un bouton
- */
-function saveArduino() {
-  	var data = document.getElementById('textarea_arduino').value;
-	var blob = new Blob([data], {type: 'text'});
-	saveAs(blob, 'code_arduino.ino');
 }
 
 /**
@@ -398,23 +388,44 @@ $(document).ready(function () {
 </head>
 <body>
   <table height="100%" width="100%">
+     <tbody>
     <tr>
       <td>
-        <img src="Arduino-uno-perspective-transparent.png" border="0" align="left" height=76/><h3>BlocklyDuino<br>éditeur graphique pour aider à la programmation des interfaces Arduino</h3>        
+      <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td colspan="1" rowspan="2">
+            <a href="http://www.technologiescollege.fr/blocklyduino/"><img src="Arduino-uno-perspective-transparent.png" align="left" border="0" height="76"></a><h3><b>BlocklyDuino</b> : éditeur graphique pour aider à la programmation des interfaces Arduino</h3>
+            </td>
+            <td style="text-align: right; width: 490px; vertical-align: middle;">
+            <h4>Carte Arduino :&nbsp;
+            <select id="pinout" size="1" onclick="arduino_card()">
+            <option value="arduino">UNO</option>
+            <option value="arduino_mega">MEGA</option>
+            </select>
+            </h4>
+            <form name="pinoutform"></form>
+            </td>
+            <td style="width: 16px;"></td>
+            <td style="width: 151px; text-align: center; vertical-align: middle;"><button class="btn btn-info" onclick="shield()">matériels connectés</button></td>
+            <td style="width: 10px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: middle; text-align: right;" colspan="3" rowspan="1">
+            <button class="btn btn-danger" onclick="discard()">réinitialiser</button>
+            <button class="btn btn-success" onclick="save()">sauver en fichier XML</button>
+            <button id="fakeload" class="btn btn-success">charger un fichier XML</button>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
       </td>
     </tr>
     <tr>
       <td>
         <table>
-          <tr>
-			<td>
-				<form name="pinoutform">
-					<Select id="pinout" size="1" onclick="arduino_card()">
-						<Option value="arduino">Arduino UNO</Option>
-						<Option value="arduino_mega">Arduino MEGA</Option>
-					</Select>
-				</form>
-			</td>
+          <tr>			
 		  <td>
 		  <tr id="tabRow" height="1em">
             <td id="tab_blocks" class="tabon" onclick="tabClick(this.id)">blocs</td>
@@ -424,32 +435,21 @@ $(document).ready(function () {
             <td id="tab_term" class="taboff" onclick="tabClick(this.id)">console série</td>
 			<td class="tabmin">&nbsp;</td>    
             <td id="tab_xml" class="taboff" onclick="tabClick(this.id)">traduction XML</td>
-			<td class="tabmin">&nbsp;</td>    
-            <td class="tabmin">
-              <TABLE CELLPADDING=10 CELLSPACING=20>
-               <TR><TD>
-              <button onclick="shield()">matériels connectés</button>
-			  <button onclick="discard()">réinitialiser</button>
-              <button onclick="save()">sauver en fichier XML</button>
-              <button id="fakeload">charger un fichier XML</button>
-			  <button onclick="lang()">langues</button>
-               </TD></TR></TABLE>
+			<td class="tabmin">&nbsp;</td>  
               <input type="file" id="load" style="display: none;"/>
             </td>
           </tr>
         </table>
       </td>
- 
     </tr>
     <tr>
       <td height="99%">
         <iframe id="content_blocks" src="frame.html"></iframe>
         <div id="content_arduino">          
           <select id="cb_cf_boards"></select><select id="cb_cf_ports"></select>
-              <button id="cb_cf_verify_btn" class="btn btn-success">vérifier le code</button>
-              <button id="cb_cf_flash_btn" class="btn btn-success">téléverser dans l'Arduino ! </button>           
-              <button id="btn_ino" class="btn btn-success" onclick="saveArduino()">sauvegarder en fichier INO</button>
-			  <a class='btn btn-success' href="#" id ="exportArduino" role='button'>Sauvegarde en fichier INO</a>
+              <button id="cb_cf_verify_btn" class="btn btn-primary">vérifier le code</button>
+              <button id="cb_cf_flash_btn" class="btn btn-primary">téléverser dans l'Arduino ! </button>           
+			  <a id ="exportArduino" class='btn btn-primary' href="#" role='button'>sauvegarde en fichier INO</a>
               <textarea id="textarea_arduino"></textarea>
               <p id="cb_cf_operation_output"></p>
               <div id="debug_arduino"></div>
@@ -460,16 +460,32 @@ $(document).ready(function () {
         </div>
         <div id="content_term">
           <select id="cb_cf_baud_rates"></select>
-          <button id="cb_cf_serial_monitor_connect">ouvrir la console série</button>
+          <button id="cb_cf_serial_monitor_connect" class="btn btn-primary">ouvrir la console série</button>
           <div id="cb_cf_serial_monitor"></div>  
         </div>
       </td>
     </tr>
 	<tr>
-		<td>
-			<a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</a> - traductions et adaptations Sébastien Canet, sur la reprise du code amélioré par Julien Rat, boosté par Olivier Métayer</i>
-		</td>
-	</tr>
+      <td>
+      <table style="width: 100%; text-align: left; margin-left: auto; margin-right: 0px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td><a href="https://github.com/technologiescollege/BlocklyDuino"><i>BlocklyDuino FR sur Github</i></a><i> - traductions et adaptations Sébastien Canet, sur la reprise du code amélioré par Julien Rat, boostés par Olivier Métayer !</i>
+			</td>
+            <td style="text-align: right;">
+            <table style="text-align: left; margin-left: auto; margin-right: 0px;">
+              <tbody>
+                <tr>
+                  <td><button class="btn btn-warning" onclick="lang()">langues</button></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
   </table>
 
 </body>

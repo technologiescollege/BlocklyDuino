@@ -9,6 +9,33 @@ if (!Blockly.Language) Blockly.Language = {};
 
 
 //define write block
+Blockly.Language.servo_foreverturn = {
+  category: 'servo-moteur',
+  helpUrl: 'http://www.arduino.cc/playground/ComponentLib/servo',
+  init: function() {
+    this.setColour(190);
+    this.appendDummyInput("")
+        .appendTitle("faire tourner le servo-moteur à rotation continue")
+        .appendTitle(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
+        .appendTitle("sur la broche")
+        .appendTitle(new Blockly.FieldDropdown(profile.default.PWM), "PIN")
+    this.appendValueInput("SENS", Boolean)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendTitle("sens horaire (VRAI ou FAUX ?)");
+	this.appendValueInput("VITESSE", Number)
+        .setCheck(Number)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendTitle("à la vitesse [0~255] de");
+    this.appendValueInput("DELAY_TIME", Number)
+        .setCheck(Number)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendTitle("pendant un délai (ms) de");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("rotation possible entre 0~180 degrés : 0~90 puissance variable dans un sens ; 90~180 puissance variable dans l'autre sens");
+  }
+};
+
 Blockly.Language.initbot = {
   category: 'InsectBot',
   helpUrl: '',
@@ -665,5 +692,30 @@ Blockly.Arduino.blinkybot = function() {
   // Blockly.Arduino.setups_['setup_custom_read_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
   
   var code = 'blinkybot();\n';
+  return code;
+};
+
+Blockly.Arduino.servo_foreverturn = function() {
+  var dropdown_pin = this.getTitleValue('PIN');
+  var value_degree = Blockly.Arduino.valueToCode(this, 'VITESSE', Blockly.Arduino.ORDER_ATOMIC);
+  //value_degree = value_degree.replace('(','').replace(')','')
+  var delay_time = Blockly.Arduino.valueToCode(this, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC) || '1000'
+  //delay_time = delay_time.replace('(','').replace(')','');
+  var value_sens = Blockly.Arduino.valueToCode(this, 'SENS', Blockly.Arduino.ORDER_ATOMIC);
+  
+  Blockly.Arduino.definitions_['define_servo'] = '#include <Servo.h>\n';
+  Blockly.Arduino.definitions_['var_servo'+dropdown_pin] = 'Servo servo_'+dropdown_pin+';\n';
+  Blockly.Arduino.setups_['setup_servo_'+dropdown_pin] = 'servo_'+dropdown_pin+'.attach('+dropdown_pin+');\n';
+  if (value_sens =="(true)")
+		{
+		//value_degree = 'map(value_degree, 0, 255, 0 , 90)' ;
+		var code = 'servo_'+dropdown_pin+'.write(90 + map('+value_degree+', 0, 255, 0 , 90));\n'+'delay(' + delay_time + ');\n';
+		}
+		else
+		{
+		//value_degree = '90 - map(value_degree, 0, 255, 0 , 90)' ;
+		var code = 'servo_'+dropdown_pin+'.write(90 - map('+value_degree+', 0, 255, 0 , 90));\n'+'delay(' + delay_time + ');\n';
+		}
+  // var code = 'servo_'+dropdown_pin+'.write('+value_degree+');\n'+'delay(' + delay_time + ');\n';
   return code;
 };
