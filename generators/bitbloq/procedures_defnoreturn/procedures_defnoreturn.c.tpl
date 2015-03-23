@@ -1,2 +1,0 @@
-{{returnType}} {{funcName}} ({{args}}) {
-{{branch}} }

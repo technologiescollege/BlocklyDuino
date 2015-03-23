@@ -1,1 +1,0 @@
-delay({{delay_time}});

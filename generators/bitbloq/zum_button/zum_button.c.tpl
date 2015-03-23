@@ -1,1 +1,0 @@
-digitalRead({{dropdown_pin}})

@@ -1,1 +1,0 @@
-blueToothSerial.read()
