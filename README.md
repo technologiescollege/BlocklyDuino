@@ -1,4 +1,5 @@
 Version francisée de BlocklyDuino
+## Remplacéee par [Blockly@rduino](https://github.com/technologiescollege/Blockly-at-rduino)
 =====
 
 BlocklyDuino est un programme web, un **webware graphique permettant la programmation graphique pour [Arduino](http://www.arduino.cc/) et sa _traduction en code_**.
